@@ -13,8 +13,16 @@
       }
 
       #map {
-        height: 100%;
-        width: 80%;
+        height: 50%;
+        width: 100%;
+      }
+
+       #container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom:  0;
+        height: 50%;
       }
     </style>
 
@@ -22,8 +30,11 @@
   </head>
   <body>
     <div id="map"></div>
+    <div id="container"></div>
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/vendor/highcharts.js"></script>
+    <script type="text/javascript" src="js/water_data.js"></script>
 
     <!-- include google maps library *before* load cartodb.js -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -50,10 +61,14 @@
           .addTo(map)
           .on('done', function(layer) {
             var sublayer = layer.getSubLayer(0);
-            sublayer.on('featureOver', function(e, pos, latlng, data) {
+            sublayer.on('featureClick', function(e, pos, latlng, data) {
               // cartodb.log.log(e, pos, latlng, data);
-              if (data.basin_water_office_data_filename) {
-                var url = "data2/" + data.basin_water_office_data_filename
+              var fileName = data.basin_water_office_data_filename
+
+              console.log(data)
+
+              if (fileName) {
+                var url = "data/" + fileName
                 console.log("loading", url);
                 $.ajax({
                   url: url,
@@ -61,7 +76,35 @@
                     throw new Error(err)
                   },
                   success: function(fileData) {
-                    console.log("yay data!", fileData.slice(0, 100))
+                    console.log("loaded")
+                    // console.log("loaded", fileData.slice(0, 100))
+
+                    var cleanData = fileData.split("\n")
+                      .slice(0, 10)
+                      .map(function(row) {
+                        row = row.split(",")
+                        // console.log(row)
+                        var date, value
+                        if ('waterlevel' === data.datatype) {
+                          new Date(row[0])
+                          value = +row[1]
+                        } else {
+                          date = new Date(row[0] + ' ' + row[1])
+                          value = +row[2]
+                        }
+                        var out = [date, value]
+                        console.log(out)
+                        return out
+                      })
+                      .filter(function(row) {
+                        return row[1];
+                      })
+
+                    // console.log(cleanData.slice(0, 10))
+
+                    chart.series[0].setData(cleanData);
+                     chart.legend.allItems[0].update({name: data.datatype});
+
                   }
                 })
 
