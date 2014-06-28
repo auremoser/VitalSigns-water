@@ -11,6 +11,9 @@ var chart = new Highcharts.Chart({
     title: {
         text: 'Environmental Reading at Gauging Station - TZA'
     },
+    subtitle: {
+        text: ''
+    },
     credits: {
     enabled: false
     },

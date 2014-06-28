@@ -114,6 +114,7 @@
                     chart.series[0].setData(cleanData);
                     chart.legend.allItems[0].update({name: data.datatype});
                     chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
+                    chart.setTitle(null, { text: data.basin_name});
 
                   }
                 })
