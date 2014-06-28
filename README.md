@@ -15,6 +15,9 @@ Here's how the map might look:
 Here's how the relationship between graph and map might look:
 ![Map of Gauging Station Data](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-watermashup.jpg)
 
+Here's how the fixed graph looks for a station that has data:
+![Has_Data]()
+
 ### Next steps
 Visualizations are incomplete, layers need to be added to the map and data should be scrubbed to better match associated environmental data sets.
 

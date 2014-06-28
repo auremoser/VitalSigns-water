@@ -62,11 +62,11 @@
           .addTo(map)
           .on('done', function(layer) {
             var sublayer = layer.getSubLayer(0);
+
             sublayer.on('featureClick', function(e, pos, latlng, data) {
               // cartodb.log.log(e, pos, latlng, data);
               var fileName = data.basin_water_office_data_filename
-
-              console.log(data)
+              // console.log(data)
 
               if (fileName) {
                 var url = "data/" + fileName
@@ -77,35 +77,38 @@
                     throw new Error(err)
                   },
                   success: function(fileData) {
-                    console.log("loaded")
                     // console.log("loaded", fileData.slice(0, 100))
 
                     var cleanData = fileData.split("\n")
-                      .slice(0, 10)
+                      // .slice(0, 10)
                       .map(function(row) {
                         row = row.split(",")
                         // console.log(row)
                         var date, value
-                        if ('waterlevel' === data.datatype) {
-                          new Date(row[0])
-                          value = +row[1]
-                        } else {
-                          date = new Date(row[0] + ' ' + row[1])
-                          value = +row[2]
+                        if (['dmf'].indexOf(data.datatype) >= 0) {
+                          return [
+                            new Date(row[0]),
+                            +row[1]
+                          ]
                         }
-                        var out = [date, value]
-                        console.log(out)
-                        return out
+
+                        if (['waterlevel'].indexOf(data.datatype) >= 0) {
+                          return [
+                            new Date(row[0] + ' ' + row[1]),
+                            +row[2]
+                          ]
+                        }
+                        console.log("don't know", data.datatype, row)
                       })
                       .filter(function(row) {
                         return row[1];
                       })
 
-                    // console.log(cleanData.slice(0, 10))
+                    // console.log(cleanData)
 
                     chart.series[0].setData(cleanData);
-                     chart.legend.allItems[0].update({name: data.datatype});
-
+                    chart.legend.allItems[0].update({name: data.datatype});
+                    chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
                   }
                 })
 
@@ -121,6 +124,13 @@
             cartodb.log.log("some error occurred");
           });
 
+      }
+
+      var units = {
+        'dmf': 'm3/s',
+        'waterlevel': 'm',
+        'rain': 'mm',
+        'temperature': '°C',
       }
 
       window.onload = main;

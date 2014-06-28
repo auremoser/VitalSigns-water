@@ -21,7 +21,7 @@ var chart = new Highcharts.Chart({
         type: 'datetime',
         dateTimeLabelFormats: { // don't display the dummy year
             month: '%e. %b',
-            year: '%b'
+            year: '%b %Y'
         },
         title: {
             text: 'Date'
