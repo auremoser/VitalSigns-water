@@ -11,12 +11,6 @@ var chart = new Highcharts.Chart({
     title: {
         text: 'Environmental Reading at Gauging Station - TZA'
     },
-<<<<<<< HEAD
-=======
-    subtitle: {
-        text: 'rainfall, water-level, dmf, temperature'
-    },
->>>>>>> master
     credits: {
     enabled: false
     },
@@ -24,11 +18,7 @@ var chart = new Highcharts.Chart({
         type: 'datetime',
         dateTimeLabelFormats: { // don't display the dummy year
             month: '%e. %b',
-<<<<<<< HEAD
             year: '%b %Y'
-=======
-            year: '%b'
->>>>>>> master
         },
         title: {
             text: 'Date'
