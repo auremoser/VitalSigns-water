@@ -11,9 +11,6 @@ var chart = new Highcharts.Chart({
     title: {
         text: 'Environmental Reading at Gauging Station - TZA'
     },
-    subtitle: {
-        text: 'rainfall, water-level, dmf, temperature'
-    },
     credits: {
     enabled: false
     },

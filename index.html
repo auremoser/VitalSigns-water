@@ -61,7 +61,7 @@
           cartodb.createLayer(map, layerUrl)
           .addTo(map)
           .on('done', function(layer) {
-            var sublayer = layer.getSubLayer(0);
+            var sublayer = layer.getSubLayer(1);
 
             sublayer.on('featureClick', function(e, pos, latlng, data) {
               // cartodb.log.log(e, pos, latlng, data);
