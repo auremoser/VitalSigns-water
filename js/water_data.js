@@ -1,7 +1,8 @@
 'use strict';
 var chart = new Highcharts.Chart({
     chart: {
-        renderTo: 'container'
+        renderTo: 'container',
+        backgroundColor: '#ffefb1'
     },
     colors: [
     // colors taken from the palette on this site: http://vitalsigns.org/

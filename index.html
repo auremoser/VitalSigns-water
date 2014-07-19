@@ -13,6 +13,13 @@
         margin: 0;
       }
 
+      #title {
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        background-color: #ffefb1;
+      }
+
       #map {
         height: 50%;
         width: 100%;
@@ -30,6 +37,7 @@
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
   </head>
   <body>
+    <div id="title">Water Availability</div>
     <div id="map"></div>
     <div id="container"></div>
 
@@ -45,6 +53,7 @@
     <script>
       function main() {
           var map;
+          var CLICKLAYER = 2;
 
           // create google maps map
           var mapOptions = {
@@ -62,13 +71,33 @@
           .addTo(map)
           .on('done', function(layer) {
 
-            var sublayer = layer.getSubLayer(1);
+            var sublayer = layer.getSubLayer(CLICKLAYER);
 
             sublayer.on('featureClick', function(e, pos, latlng, data) {
+              loadPoint(data)
+            })
+
+            loadPoint({
+              "basin_name": "Rufiji Basin",
+              "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
+              "datatype": "waterlevel",
+              // "fields": [
+              //   {
+              //     "title": "basin_name",
+              //     "value": "Rufiji Basin",
+              //     "index": null
+              //   },
+              //   {
+              //     "title": "basin_water_office_data_filename",
+              //     "value": "Little Ruaha at Mawande water level.txt",
+              //     "index": 1
+              //   }
+              // ]
+            })
+
+            function loadPoint(data) {
               // cartodb.log.log(e, pos, latlng, data);
               var fileName = data.basin_water_office_data_filename
-              // console.log(data)
-
 
               if (fileName) {
                 var url = "data/" + fileName
@@ -80,7 +109,7 @@
                   },
                   success: function(fileData) {
 
-                    // console.log("loaded", fileData.slice(0, 100))
+                    console.log("loaded", fileData.slice(0, 100))
 
                     var cleanData = fileData.split("\n")
                       // .slice(0, 10)
@@ -120,7 +149,7 @@
                 })
 
               }
-            });
+            }
 
             sublayer.on('error', function(err) {
               cartodb.log.log('error: ' + err);
@@ -133,10 +162,10 @@
 
       }
       var units = {
-        'dmf': 'm3/s',
-        'waterlevel': 'm',
-        'rain': 'mm',
-        'temperature': '°C',
+        'dmf': 'Discharge [m3/s]',
+        'waterlevel': 'Discharge [m]',
+        'rain': 'Rain [mm]',
+        'temperature': 'Temperature [°C]',
       }
 
       window.onload = main;
