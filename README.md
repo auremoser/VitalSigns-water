@@ -25,6 +25,6 @@ Here's how it looks with the TZA cluster shape files added:
 Visualizations are incomplete, layers need to be added to the map and data should be scrubbed to better match associated environmental data sets.
 
 ### Demo
-You can find the work in progress demo [here](http://auremoser.github.io/VitalSigns-water/).
+You can find the work in progress demo [here](http://auremoser.github.io/VitalSigns-water/).a
 Current Demo:
 ![VitalSigns Final](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-final.jpg)
