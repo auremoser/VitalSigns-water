@@ -59,7 +59,17 @@
           var mapOptions = {
             zoom: 6,
             center: new google.maps.LatLng(-8.222, 38.122),
-            mapTypeId: google.maps.MapTypeId.TERRAIN
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            styles: [
+              {
+                  featureType: "poi",
+                  elementType: "labels",
+                  stylers: [
+                    { visibility: "off" }
+                  ]
+              }
+            ]
+
           };
           map = new google.maps.Map(document.getElementById('map'),  mapOptions);
 
