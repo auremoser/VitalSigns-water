@@ -22,7 +22,7 @@ var groupedBySCN = _.groupBy(originalCsv, function(d) {
 });
 
 var mapping = {}
-
+// Group files by station name (SCN); let multiple files link to same point on map
 _.each(groupedBySCN, function(stations, scn) {
 	var tmp = []
 	_.each(stations, function(station) {
@@ -42,7 +42,7 @@ console.log(mapping)
 fs.writeFileSync(cleanedMappingFile, JSON.stringify(mapping))
 
 var cleaned = []
-
+// Remove columns that change: datatype, basin water .txt reference
 _.each(groupedBySCN, function(stations) {
 	var station = stations[0]
 	station.data = _.some(stations, function(d) {
