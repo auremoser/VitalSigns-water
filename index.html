@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VitalSigns - Water</title>
+    <title>VS - Gauging Stations</title>
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/auremoser/vital-signs/master/assets/vs-favicon.ico" type="image/x-icon">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -12,25 +12,65 @@
         padding: 0;
         margin: 0;
       }
-
-      #title {
+      h3 {
+        padding: 0;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 22px;
         font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+      }
+      #title {
         font-size: 26px;
         text-align: center;
         background-color: #ffefb1;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
       }
-
       #map {
         height: 50%;
         width: 100%;
       }
-
-       #container {
+       #graph {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+        width: 85%;
+      }
+      #menu {
         position: absolute;
         left: 0;
         right: 0;
-        bottom:  0;
+        bottom: 0;
         height: 50%;
+        width: 15%;
+        background-color: #3E7BB6;
+        text-align: center;
+      }
+      .menuLinks ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style-type: none;
+      }
+      .menuLinks ul li a {
+        color: #333333;
+        padding: 25px;
+        background-color: #3E7BB6;
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+      }
+      .menuLinks ul li a:visited {
+        color: #fffff;
+      }
+      .menuLinks ul li a:hover, .menu_simple ul li .current {
+        color: #fffff;
+        background-color: #5f94c8;
       }
     </style>
 
@@ -39,12 +79,21 @@
   <body>
     <div id="title">Water Availability</div>
     <div id="map"></div>
-    <div id="container"></div>
+    <div id="graph"></div>
+    <div id="menu" class="menuLinks">
+      <ul>
+        <li><a href="#">Water Level</a></li>
+        <li><a href="#">Water Flow</a></li>
+        <li><a href="#">Temperature</a></li>
+        <li><a href="#">RainFall</a></li>
+      </ul>
+    </div>
 
+    <!-- include jquery and highstock (faster than highcharts) -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/vendor/highcharts.js"></script>
+    <!-- // <script src="js/vendor/highstock.js"></script> -->
     <script type="text/javascript" src="js/water_data.js"></script>
-
     <!-- include google maps library *before* load cartodb.js -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <!-- include cartodb.js library -->
@@ -74,7 +123,7 @@
           map = new google.maps.Map(document.getElementById('map'),  mapOptions);
 
           // var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json';
-          var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/9d97a04e-fd6c-11e3-a249-0edbca4b5057/viz.json';
+          var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/81f06948-18f6-11e4-b079-0e230854a1cb/viz.json';
 
           // create layer and add to the map, then add some interfeatures
           cartodb.createLayer(map, layerUrl)
