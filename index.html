@@ -84,29 +84,18 @@
             var sublayer = layer.getSubLayer(CLICKLAYER);
 
             sublayer.on('featureClick', function(e, pos, latlng, data) {
+              cartodb.log.log(e, pos, latlng, data);
               loadPoint(data)
             })
 
             loadPoint({
               "basin_name": "Rufiji Basin",
+              "scn": "1KA31",
               "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
-              "datatype": "waterlevel",
-              // "fields": [
-              //   {
-              //     "title": "basin_name",
-              //     "value": "Rufiji Basin",
-              //     "index": null
-              //   },
-              //   {
-              //     "title": "basin_water_office_data_filename",
-              //     "value": "Little Ruaha at Mawande water level.txt",
-              //     "index": 1
-              //   }
-              // ]
+              "datatype": "waterlevel"
             })
 
             function loadPoint(data) {
-              // cartodb.log.log(e, pos, latlng, data);
               var fileName = data.basin_water_office_data_filename
 
               if (fileName) {
@@ -148,12 +137,12 @@
                         return row[1];
                       })
 
-                    // console.log(cleanData)
+                    console.log(data);
 
                     chart.series[0].setData(cleanData);
                     chart.legend.allItems[0].update({name: data.datatype});
                     chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
-                    chart.setTitle(null, { text: data.basin_name});
+                    chart.setTitle(null, { text: data.basin_name + " - " + data.scn});
 
                   }
                 })
