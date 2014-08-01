@@ -21,16 +21,24 @@
         line-height: 22px;
         font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
       }
+      /* ungrid.css (97 bytes minified) */
+      @media (min-width: 30em) {
+          .row { width: 100%; display: table; table-layout: fixed; }
+          .col { display: table-cell; }
+      }
+      /* end ungrid: http://chrisnager.github.io/ungrid */
       #title {
-        font-size: 26px;
-        padding-top:20px;
-        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-bottom: 10px;
         text-align: center;
+        text-transform: uppercase;
         background-color: #ffefb1;
+        font-weight: bold;
+        font-size: 26px;
         font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
       }
       #map {
-        height: 42%;
+        height: 52%;
         width: 100%;
         background-image: url(assets/preview.png);
         background-size: contain;
@@ -41,16 +49,16 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        height: 50%;
-        width: 85%;
+        height: 40%;
+        /*width: 85%;*/
       }
       #menu {
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
-        height: 50%;
-        width: 15%;
+        height: 40%;
+        /*width: 15%;*/
         background-color: #3E7BB6;
         text-align: center;
       }
@@ -65,8 +73,7 @@
         padding-top: 25px;
         padding-bottom: 25px;
         width: 100%;
-        background-color: #3E7BB6;
-        display: block;
+        display: inline-block;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: bold;
@@ -85,17 +92,20 @@
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
   </head>
   <body>
-    <div id="title">Water Availability</div>
-    <div id="map"></div>
-    <div id="graph"></div>
-    <div id="menu" class="menuLinks">
-      <ul>
-        <li><a href="#">Water Level</a></li>
-        <li><a href="#">Water Flow</a></li>
-        <li><a href="#">Temp</a></li>
-        <li><a href="#">Rain</a></li>
-      </ul>
+    <div id="title" class="row">Water Availability</div>
+    <div id="map" class="row" style="width: 100%"></div>
+    <div class="row">
+      <div id="graph" class="col" style="width: 80%"></div>
+      <div id="menu" class="col menuLinks" style="width: 20%">
+        <ul>
+          <li><a href="#">Water Level</a></li>
+          <li><a href="#">Water Flow</a></li>
+          <li><a href="#">Temp</a></li>
+          <li><a href="#">Rain</a></li>
+        </ul>
+      </div>
     </div>
+
 
     <!-- include jquery and highstock (faster than highcharts) -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -112,7 +122,7 @@
           var map;
           var mapping = {};
           var CLICKLAYER = 2;
-          var preloader = new Prelaoder();
+          var preloader = new Preloader();
 
           loadFile('data/mapping.json', mapping);
 
@@ -231,7 +241,7 @@
 
       }
 
-      function Prelaoder(){
+      function Preloader(){
         this.show = function(){
           $("body").css("cursor", "wait");
         }
