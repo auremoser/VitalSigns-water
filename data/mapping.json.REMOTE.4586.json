@@ -1,0 +1,193 @@
+{
+    "1KB19": [{
+        "file": "Hagafiro at Hagafiro dmf.txt",
+        "datatype": "dmf"
+    }],
+    "1KB2": [{
+        "file": "Ifakara automet.txt",
+        "datatype": "met"
+    }, {
+        "file": "Ifakara standard rainfall.txt",
+        "datatype": "rain"
+    }],
+    "1KB26": [{
+        "file": "Kiberege at Kiberege water level ds.txt",
+        "datatype": "waterlevel"
+    }, {
+        "file": "Kiberege at Kiberege water level ups.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB31": [{
+        "file": "Kigogo Ruaha at Lugema water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB4": [{
+        "file": "Kilombero at Ifwema water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB17": [{
+        "file": "Kilombero at Swero dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Kilombero at Swero water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB14A": [{
+        "file": "Lumemo River at Kiburubutu dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Lumemo River at Kiburubutu water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB12A": [{
+        "file": "Mchilipa at Itete water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB15": [{
+        "file": "Mngeta at Mchombe dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Mngeta at Mchombe water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB9": [{
+        "file": "Mnyera at Taveta ds water level.txt",
+        "datatype": "waterlevel"
+    }, {
+        "file": "Mnyera at Taveta ups water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB8": [{
+        "file": "Mpanga at Mpanga dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Mpanga at Mpanga water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB18": [{
+        "file": "Njombe automet rain.txt",
+        "datatype": "rain"
+    }, {
+        "file": "Njombe automet temperature.txt",
+        "datatype": "temperature"
+    }],
+    "1KB18B": [{
+        "file": "Ruhudji at Below Kifung���a Falls dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Ruhudji at Below Kifung���a Falls water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB30": [{
+        "file": "Ruhudji at Idonja Falls water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB24": [{
+        "file": "Sanje at Sanje water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KB23": [{
+        "file": "Sonjo at Sonjo water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KA59": [{
+        "file": "Great Ruaha at Msembe dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Great Ruaha at Msembe water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KA8A": [{
+        "file": "Great Ruaha at Salimwani water level.txt",
+        "datatype": "waterlevel"
+    }, {
+        "file": "Great Ruaha at Salimwani_dmf.txt",
+        "datatype": "dmf"
+    }],
+    "1KA9": [{
+        "file": "Kimani at GNR dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Kimani at GNR water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KA32A": [{
+        "file": "Little Ruaha at Makalala dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Little Ruaha at Makalala water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KA31": [{
+        "file": "Little Ruaha at Mawande dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Little Ruaha at Mawande water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KA2A": [{
+        "file": "Little Ruaha at Ndiuka dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Little Ruaha at Ndiuka waterlevel.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KA11A": [{
+        "file": "Mbarali River at Igawa dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Mbarali River at Igawa water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "1KA15A": [{
+        "file": "Ndembera River at Ilongo dmf.txt",
+        "datatype": "dmf"
+    }, {
+        "file": "Ndembera River at Ilongo water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "unknown18": [{
+        "file": "Kihansi at Lugoda water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "unknown21": [{
+        "file": "Kihansi at Lutaki water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "unknown22": [{
+        "file": "Kihansi River at Lutaki dmf.txt",
+        "datatype": "dmf"
+    }],
+    "unknown24": [{
+        "file": "Kilombero at Ifakara Ferry water level.txt",
+        "datatype": "waterlevel"
+    }],
+    "unknown26": [{
+        "file": "Lumemo Met Station rainfall.txt",
+        "datatype": "rain"
+    }],
+    "unknown28": [{
+        "file": "Mapanda automet rain",
+        "datatype": "rain"
+    }],
+    "unknown30": [{
+        "file": "Tanganyika Watlle rainfall.txt",
+        "datatype": "rain"
+    }],
+    "unknown32": [{
+        "file": "Taveta Mission monthly rainfall.txt",
+        "datatype": "rain"
+    }],
+    "unknown34": [{
+        "file": "Udzungwa automet rain.txt",
+        "datatype": "rain"
+    }],
+    "unknown36": [{
+        "file": "Uhafiwa automet rainfall.txt",
+        "datatype": "rain"
+    }],
+    "unknown37": [{
+        "file": "Uhafuwa automet std rainfall.txt",
+        "datatype": "rain"
+    }]
+}

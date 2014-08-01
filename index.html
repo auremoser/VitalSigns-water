@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VitalSigns - Water</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/auremoser/VitalSigns-water/master/assets/vs-favicon.ico" type="image/x-icon">
+    <title>VS - Gauging Stations</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/auremoser/vital-signs/master/assets/vs-favicon.ico" type="image/x-icon">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <style>
@@ -12,31 +12,96 @@
         padding: 0;
         margin: 0;
       }
-
-      #map {
-        height: 50%;
-        width: 100%;
+      h3 {
+        padding: 0;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 22px;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
       }
-
-       #container {
+      #title {
+        font-size: 26px;
+        padding-top:20px;
+        padding-bottom: 15px;
+        text-align: center;
+        background-color: #ffefb1;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+      }
+      #map {
+        height: 42%;
+        width: 100%;
+        background-image: url(assets/preview.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 99999;
+      }
+       #graph {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+        width: 85%;
+      }
+      #menu {
         position: absolute;
         left: 0;
         right: 0;
-        bottom:  0;
+        bottom: 0;
         height: 50%;
+        width: 15%;
+        background-color: #3E7BB6;
+        text-align: center;
+      }
+      .menuLinks ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style-type: none;
+      }
+      .menuLinks ul li a {
+        color: #333333;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 100%;
+        background-color: #3E7BB6;
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+      }
+      .menuLinks ul li a:visited {
+        color: #fffff;
+      }
+      .menuLinks ul li a:hover, .menu_simple ul li .current {
+        color: #fffff;
+        background-color: #5f94c8;
       }
     </style>
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
   </head>
   <body>
+    <div id="title">Water Availability</div>
     <div id="map"></div>
-    <div id="container"></div>
+    <div id="graph"></div>
+    <div id="menu" class="menuLinks">
+      <ul>
+        <li><a href="#">Water Level</a></li>
+        <li><a href="#">Water Flow</a></li>
+        <li><a href="#">Temp</a></li>
+        <li><a href="#">Rain</a></li>
+      </ul>
+    </div>
 
+    <!-- include jquery and highstock (faster than highcharts) -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/vendor/highcharts.js"></script>
+    <!-- // <script src="js/vendor/highstock.js"></script> -->
     <script type="text/javascript" src="js/water_data.js"></script>
-
     <!-- include google maps library *before* load cartodb.js -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <!-- include cartodb.js library -->
@@ -45,72 +110,115 @@
     <script>
       function main() {
           var map;
+          var mapping = {};
+          var CLICKLAYER = 2;
+          var preloader = new Prelaoder();
+
+          loadFile('data/mapping.json', mapping);
 
           // create google maps map
           var mapOptions = {
             zoom: 6,
             center: new google.maps.LatLng(-8.222, 38.122),
-            mapTypeId: google.maps.MapTypeId.TERRAIN
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            // remove poi popups from google maps
+            styles: [
+              {
+                  featureType: "poi",
+                  elementType: "labels",
+                  stylers: [
+                    { visibility: "off" }
+                  ]
+              }
+            ]
+
           };
           map = new google.maps.Map(document.getElementById('map'),  mapOptions);
 
-          // var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json';
-          var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/9d97a04e-fd6c-11e3-a249-0edbca4b5057/viz.json';
+          // var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/81f06948-18f6-11e4-b079-0e230854a1cb/viz.json';
+          var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/78b74fbc-1929-11e4-bc28-0e10bcd91c2b/viz.json';
 
-          // create layer and add to the map, then add some intera
+          // create layer and add to the map, then add some interfeatures
           cartodb.createLayer(map, layerUrl)
           .addTo(map)
           .on('done', function(layer) {
-            var sublayer = layer.getSubLayer(0);
-            sublayer.on('featureClick', function(e, pos, latlng, data) {
-              // cartodb.log.log(e, pos, latlng, data);
-              var fileName = data.basin_water_office_data_filename
 
-              console.log(data)
+            var sublayer = layer.getSubLayer(CLICKLAYER);
+
+            sublayer.on('featureClick', function(e, pos, latlng, data) {
+              cartodb.log.log(e, pos, latlng, data);
+              loadPoint(data)
+            })
+
+            loadPoint({
+              "basin_name": "Rufiji Basin",
+              "scn": "1KA31",
+              "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
+              "datatype": "waterlevel"
+            })
+
+
+
+            function loadPoint(data) {
+
+              var ID = data.scn;
+              var fileName =window.mapping[ID][0].file;
 
               if (fileName) {
-                var url = "data/" + fileName
+
+                preloader.show();
+
+                var url = "data/stations/" + fileName
                 console.log("loading", url);
                 $.ajax({
                   url: url,
                   error: function(err) {
+                    preloader.hide();
                     throw new Error(err)
                   },
                   success: function(fileData) {
-                    console.log("loaded")
-                    // console.log("loaded", fileData.slice(0, 100))
+
+                    console.log("loaded", fileData.slice(0, 100))
 
                     var cleanData = fileData.split("\n")
-                      .slice(0, 10)
+                      // .slice(0, 10)
+
                       .map(function(row) {
                         row = row.split(",")
                         // console.log(row)
                         var date, value
-                        if ('waterlevel' === data.datatype) {
-                          new Date(row[0])
-                          value = +row[1]
-                        } else {
-                          date = new Date(row[0] + ' ' + row[1])
-                          value = +row[2]
+
+                        if (['dmf'].indexOf(data.datatype) >= 0) {
+                          return [
+                            new Date(row[0]),
+                            +row[1]
+                          ]
                         }
-                        var out = [date, value]
-                        console.log(out)
-                        return out
+
+                        if (['waterlevel'].indexOf(data.datatype) >= 0) {
+                          return [
+                            new Date(row[0] + ' ' + row[1]),
+                            +row[2]
+                          ]
+                        }
+                        console.log("don't know", data.datatype, row)
                       })
                       .filter(function(row) {
                         return row[1];
                       })
 
-                    // console.log(cleanData.slice(0, 10))
+                    console.log(data);
 
                     chart.series[0].setData(cleanData);
-                     chart.legend.allItems[0].update({name: data.datatype});
-
+                    chart.legend.allItems[0].update({name: data.datatype});
+                    chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
+                    chart.setTitle(null, { text: data.basin_name + " - " + data.scn});
+                    preloader.hide();
                   }
                 })
 
-              }
-            });
+              } else console.error('NO FILENAME')
+            }
 
             sublayer.on('error', function(err) {
               cartodb.log.log('error: ' + err);
@@ -121,6 +229,37 @@
             cartodb.log.log("some error occurred");
           });
 
+      }
+
+      function Prelaoder(){
+        this.show = function(){
+          $("body").css("cursor", "wait");
+        }
+
+        this.hide = function(){
+          $("body").css("cursor", "default");
+        }
+      }
+
+      function loadFile(url, mapping){
+        $.ajax({
+          url:url,
+          error:function(err){
+            throw new Error(err)
+          },
+          success:function(data){
+            window.mapping = data;
+            console.log(mapping)
+          }
+        })
+      }
+
+      var units = {
+        'dmf': 'Discharge [m3/s]',
+        'met': 'Discharge [m3/s]',
+        'waterlevel': 'Discharge [m]',
+        'rain': 'Rain [mm]',
+        'temperature': 'Temperature [°C]',
       }
 
       window.onload = main;
