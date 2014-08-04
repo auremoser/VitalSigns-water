@@ -28,3 +28,4 @@ Visualizations are incomplete, layers need to be added to the map and data shoul
 You can find the work in progress demo [here](http://auremoser.github.io/VitalSigns-water/).a
 Current Demo:
 ![VitalSigns Final](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-final.jpg)
+Current Feature Status Document ([available here](https://docs.google.com/a/ushahidi.com/document/d/1EqgVCw-hSaYcjneleup-y-xz5_h9r--00TGQq7DUSuQ/edit#))
