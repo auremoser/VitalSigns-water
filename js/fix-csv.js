@@ -4,9 +4,9 @@ var dsv = require('dsv');
 var fs = require('fs');
 var _ = require('underscore');
 
-var originalCsvFile = __dirname + '/data/TZA_SAGCOT_original.csv';
-var cleanedCsvFile = __dirname + '/data/TZA_SAGCOT_cleaned.csv';
-var cleanedMappingFile = __dirname + '/data/mapping.json';
+var originalCsvFile = __dirname + '/../data/TZA_SAGCOT_original.csv';
+var cleanedCsvFile = __dirname + '/../data/TZA_SAGCOT_cleaned.csv';
+var cleanedMappingFile = __dirname + '/../data/mapping.json';
 
 var data = fs.readFileSync(originalCsvFile, 'UTF-8');
 
@@ -15,6 +15,9 @@ var originalCsv = dsv.csv.parse(data);
 // Assign a unique ID if the scn is missing
 _.each(originalCsv, function(d) {
 	d.scn = d.scn || _.uniqueId('unknown');
+	if ('name' === d.Datatype) {
+		d.Datatype = null;
+	}
 });
 
 var groupedBySCN = _.groupBy(originalCsv, function(d) {
@@ -48,6 +51,8 @@ _.each(groupedBySCN, function(stations) {
 	station.data = _.some(stations, function(d) {
 		return d['basin water office data filename'];
 	});
+// Run over array pluck out datatypes, compact out the 'nulls', sort them, and join them in a string
+	station.datatypes = _.compact(_.pluck(stations, 'Datatype')).sort().join(', ')
 	delete(station['Datatype']);
 	delete(station['directory']);
 	delete(station['basin water office data filename']);

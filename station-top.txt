@@ -1,0 +1,279 @@
+==> data/stations/Great Ruaha at Msembe dmf.txt <==
+1-Jan-1963,,m,
+2-Jan-1963,,m,
+3-Jan-1963,,m,
+
+==> data/stations/Great Ruaha at Msembe water level.txt <==
+1-Jan-1963,06:00:00,,m,
+1-Jan-1963,12:00:00,,m,
+1-Jan-1963,18:00:00,,m,
+
+==> data/stations/Great Ruaha at Msosa water level.txt <==
+1-Jan-1999,06:00:00,,m,
+1-Jan-1999,18:00:00,,m,
+2-Jan-1999,06:00:00,,m,
+
+==> data/stations/Great Ruaha at Salimwani water level.txt <==
+1-Jan-1954,06:00:00,,m,
+1-Jan-1954,18:00:00,,m,
+2-Jan-1954,06:00:00,,m,
+
+==> data/stations/Great Ruaha at Salimwani_dmf.txt <==
+1-Jan-1954,,m,
+2-Jan-1954,,m,
+3-Jan-1954,,m,
+
+==> data/stations/Hagafiro at Hagafiro dmf.txt <==
+1-Jan-1961,2.610,,
+2-Jan-1961,2.290,,
+3-Jan-1961,1.520,,
+
+==> data/stations/Ifakara standard rainfall.txt <==
+1-Jan-1999,,m,
+2-Jan-1999,,m,
+3-Jan-1999,,m,
+
+==> data/stations/Kiberege at Kiberege water level ds.txt <==
+1-Jan-1965,06:00:00,,m,
+1-Jan-1965,12:00:00,,m,
+1-Jan-1965,18:00:00,,m,
+
+==> data/stations/Kiberege at Kiberege water level ups.txt <==
+1-Jan-1967,06:00:00,,m,
+1-Jan-1967,12:00:00,,m,
+1-Jan-1967,18:00:00,,m,
+
+==> data/stations/Kigogo Ruaha at Lugema water level.txt <==
+1-Jan-1990,06:00:00,,m,
+1-Jan-1990,18:00:00,,m,
+2-Jan-1990,06:00:00,,m,
+
+==> data/stations/Kihansi Dam water level.txt <==
+1-Jan-2000,,m,
+2-Jan-2000,,m,
+3-Jan-2000,,m,
+
+==> data/stations/Kihansi River at Dam bridge weir dmf.txt <==
+1-Jan-2005,,m,
+2-Jan-2005,,m,
+3-Jan-2005,,m,
+
+==> data/stations/Kihansi River at Lutaki dmf.txt <==
+1-Jan-1984,,m,
+2-Jan-1984,,m,
+3-Jan-1984,,m,
+
+==> data/stations/Kihansi at Lugoda water level.txt <==
+1-Jan-1974,,m,
+2-Jan-1974,,m,
+3-Jan-1974,,m,
+
+==> data/stations/Kihansi at Lutaki water level.txt <==
+1-Jan-1990,06:00:00,,m,
+1-Jan-1990,12:00:00,,m,
+1-Jan-1990,18:00:00,,m,
+
+==> data/stations/Kilombero at Ifakara Ferry water level.txt <==
+1-Jan-1966,06:00:00,,m,
+1-Jan-1966,18:00:00,,m,
+2-Jan-1966,06:00:00,,m,
+
+==> data/stations/Kilombero at Ifwema water level.txt <==
+1-Jan-1955,0.000,,
+2-Jan-1955,0.100,,
+3-Jan-1955,0.050,,
+
+==> data/stations/Kilombero at Swero dmf.txt <==
+1-Jan-1957,,m,
+2-Jan-1957,,m,
+3-Jan-1957,,m,
+
+==> data/stations/Kilombero at Swero water level.txt <==
+1-Jan-1957,,m,
+2-Jan-1957,,m,
+3-Jan-1957,,m,
+
+==> data/stations/Kimani at GNR dmf.txt <==
+1-Jan-1954,,m,
+2-Jan-1954,,m,
+3-Jan-1954,,m,
+
+==> data/stations/Kimani at GNR water level.txt <==
+1-Jan-1954,06:00:00,,m,
+1-Jan-1954,18:00:00,,m,
+2-Jan-1954,06:00:00,,m,
+
+==> data/stations/Little Ruaha at Makalala dmf.txt <==
+1-Jan-1957,,m,
+2-Jan-1957,,m,
+3-Jan-1957,,m,
+
+==> data/stations/Little Ruaha at Makalala water level.txt <==
+1-Jan-1957,12:00:00,,m,
+2-Jan-1957,12:00:00,,m,
+3-Jan-1957,12:00:00,,m,
+
+==> data/stations/Little Ruaha at Mawande dmf.txt <==
+1-Jan-1957,13.396,,
+2-Jan-1957,14.240,,
+3-Jan-1957,14.980,,
+
+==> data/stations/Little Ruaha at Mawande water level.txt <==
+1-Jan-1956,06:00:00,,m,
+1-Jan-1956,18:00:00,,m,
+2-Jan-1956,06:00:00,,m,
+
+==> data/stations/Little Ruaha at Ndiuka dmf.txt <==
+1-Jan-1954,,m,
+2-Jan-1954,,m,
+3-Jan-1954,,m,
+
+==> data/stations/Little Ruaha at Ndiuka waterlevel.txt <==
+1-Jan-1954,06:00:00,,m,
+1-Jan-1954,18:00:00,,m,
+2-Jan-1954,06:00:00,,m,
+
+==> data/stations/Lumemo Met Station rainfall .txt <==
+1-Jan-1969,0.0,,
+2-Jan-1969,0.0,,
+3-Jan-1969,0.0,,
+
+==> data/stations/Lumemo River at Kiburubutu dmf.txt <==
+1-Jan-1958,7.788,,
+2-Jan-1958,5.516,,
+3-Jan-1958,4.555,,
+
+==> data/stations/Lumemo River at Kiburubutu water level.txt <==
+1-Jan-1958,3.800,,
+2-Jan-1958,3.020,,
+3-Jan-1958,2.600,,
+
+==> data/stations/Mapanda automet rain.txt <==
+1-Jan-2000,,m,
+2-Jan-2000,,m,
+3-Jan-2000,,m,
+
+==> data/stations/Mbarali River at Igawa dmf.txt <==
+1-Jan-1955,,m,
+2-Jan-1955,,m,
+3-Jan-1955,,m,
+
+==> data/stations/Mbarali River at Igawa water level.txt <==
+1-Jan-1955,06:00:00,3.850,,
+1-Jan-1955,18:00:00,3.850,,
+2-Jan-1955,06:00:00,3.850,,
+
+==> data/stations/Mchilipa at Itete water level.txt <==
+1-Jan-1963,06:00:00,,m,
+1-Jan-1963,12:00:00,,m,
+1-Jan-1963,18:00:00,,m,
+
+==> data/stations/Mngeta at Mchombe dmf.txt <==
+1-Jan-1960,,m,
+2-Jan-1960,,m,
+3-Jan-1960,,m,
+
+==> data/stations/Mngeta at Mchombe water level.txt <==
+1-Jan-1960,06:00:00,,m,
+1-Jan-1960,12:00:00,,m,
+1-Jan-1960,18:00:00,,m,
+
+==> data/stations/Mnyera at Taveta ds water level.txt <==
+1-Jan-1970,06:00:00,,m,
+1-Jan-1970,12:00:00,,m,
+1-Jan-1970,18:00:00,,m,
+
+==> data/stations/Mnyera at Taveta ups water level.txt <==
+1-Jan-1956,,m,
+2-Jan-1956,,m,
+3-Jan-1956,,m,
+
+==> data/stations/Mpanga at Mpanga dmf.txt <==
+1-Jan-1956,,m,
+2-Jan-1956,,m,
+3-Jan-1956,,m,
+
+==> data/stations/Mpanga at Mpanga water level.txt <==
+1-Jan-1956,,m,
+2-Jan-1956,,m,
+3-Jan-1956,,m,
+
+==> data/stations/Muhu at Bomalang'ombe dmf.txt <==
+1-Jan-1993,,m,
+2-Jan-1993,,m,
+3-Jan-1993,,m,
+
+==> data/stations/Ndembera River at Ilongo dmf.txt <==
+1-Jan-1956,,m,
+2-Jan-1956,,m,
+3-Jan-1956,,m,
+
+==> data/stations/Ndembera River at Ilongo water level.txt <==
+1-Jan-1956,12:00:00,,m,
+2-Jan-1956,12:00:00,,m,
+3-Jan-1956,12:00:00,,m,
+
+==> data/stations/Njombe automet rain.txt <==
+1-Jan-1998,,m,
+2-Jan-1998,,m,
+3-Jan-1998,,m,
+
+==> data/stations/Njombe automet temperature.txt <==
+1-Jan-1998,,m,
+2-Jan-1998,,m,
+3-Jan-1998,,m,
+
+==> data/stations/Ruhudji at Below Kifung'a Falls dmf.txt <==
+1-Jan-1976,,m,
+2-Jan-1976,,m,
+3-Jan-1976,,m,
+
+==> data/stations/Ruhudji at Below Kifung'a Falls water level.txt <==
+1-Jan-1958,,m,
+2-Jan-1958,,m,
+3-Jan-1958,,m,
+
+==> data/stations/Ruhudji at Idonja Falls water level.txt <==
+1-Jan-1979,06:00:00,,m,
+1-Jan-1979,18:00:00,,m,
+2-Jan-1979,06:00:00,,m,
+
+==> data/stations/Ruhudji at Mkasu water level.txt <==
+1-Jan-1960,06:00:00,7.750,,
+1-Jan-1960,12:00:00,7.750,,
+1-Jan-1960,18:00:00,7.750,,
+
+==> data/stations/Sanje at Sanje water level.txt <==
+1-Jan-1961,06:00:00,,m,
+1-Jan-1961,12:00:00,,m,
+1-Jan-1961,18:00:00,,m,
+
+==> data/stations/Sonjo at Sonjo water level.txt <==
+1-Jan-1961,06:00:00,3.200,,
+1-Jan-1961,18:00:00,3.160,,
+2-Jan-1961,06:00:00,3.120,,
+
+==> data/stations/Tanganyika Watlle rainfall.txt <==
+1-Jan-1990,,m,
+2-Jan-1990,,m,
+3-Jan-1990,,m,
+
+==> data/stations/Taveta Mission monthly rainfall.txt <==
+Jan 1942,,m,
+Feb 1942,,m,
+Mar 1942,573.3,,
+
+==> data/stations/Udzungwa automet rain.txt <==
+1-Jan-2000,,m,
+2-Jan-2000,,m,
+3-Jan-2000,,m,
+
+==> data/stations/Uhafiwa automet rainfall.txt <==
+1-Jan-1998,,m,
+2-Jan-1998,,m,
+3-Jan-1998,,m,
+
+==> data/stations/Uhafuwa automet std rainfall.txt <==
+1-Jan-1990,,m,
+2-Jan-1990,,m,
+3-Jan-1990,,m,
