@@ -6,11 +6,13 @@
 Originally piloted with only water gauging stations and rivers rendered, this map looked like this:
 
 ![Water Gauge + Drain](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/TZA-sagcot.jpg)
+
 * The current map illustrates water gauging stations locations on a map of TZA, and renders data collected from those stations on selecting the station.
-* The tooltips on the map give information about the gauging stations, and the data types associated with them.
+* The tooltips on the map give information about the gauging stations, and the data types associated with them.  
 ![VS Tooltip](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-tooltip.jpg)
+
 * When clicked, the station points plotted on the map load associate data in the graph below.
-* A menu is available at left (currently disabled) which when populated with multiple data sets per station would load
+* A menu is available at left (currently disabled) which when populated with multiple data sets per station would load.
 ![VS Menu](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-menu.jpg)
 
 
