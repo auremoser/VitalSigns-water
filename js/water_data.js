@@ -3,7 +3,8 @@
   window.chart = new Highcharts.StockChart({
       chart: {
           renderTo: 'graph',
-          spacingTop: 15,
+          spacingTop: 10,
+          spacingBottom: 5,
           backgroundColor: '#ffefb1'
       },
       colors: [
@@ -11,7 +12,21 @@
       // '#FFCC33', '#4E733D', '#C04420', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
       '#051036', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
       ],
+      legend: {
+        enabled: true,
+        align: 'center',
+        verticalAlign: 'bottom'
+      },
+      navigator: {
+        enabled: true,
+        height: 20,
+        margin: 0
+      },
+      scrollbar: {
+        enabled: false
+      },
       rangeSelector: {
+        enabled: true,
         buttons: [{
             type: 'month',
             count: 1,
