@@ -10,7 +10,7 @@ Originally piloted with only water gauging stations and rivers rendered, this ma
 * The tooltips on the map give information about the gauging stations, and the data types associated with them.
 ![VS Tooltip](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-tooltip.jpg)
 * When clicked, the station points plotted on the map load associate data in the graph below.
-* A menu is available at left (currently disabled) which when populated with multiple data sets per station would load
+* A menu is available at left (currently disabled) which when populated with multiple data sets per station would load.
 ![VS Menu](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-menu.jpg)
 
 
