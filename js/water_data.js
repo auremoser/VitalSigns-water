@@ -92,13 +92,11 @@
         min: 0
       },
       tooltip: {
-        headerFormat: '<b>{series.name}</b><br>',
-        pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+        pointFormat: '{series.name}: <b>{point.y:.2f}</b><br>',
       },
 
       series: [{
         // Define the data points.
-        name: ''
       }]
 
   });

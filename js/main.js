@@ -103,6 +103,7 @@ function loadPoint(data) {
         // console.log(cleanedData);
 
         chart.series[0].setData(cleanedData);
+        chart.series[0].name = data.datatype
         chart.legend.allItems[0].update({name: data.datatype});
         chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
         chart.setTitle(null, { text: data.basin_name + " - " + data.scn});
@@ -126,6 +127,11 @@ function cleanData(fileData, datatype) {
           new Date(row[0]),
           +row[1]
         ]
+      }
+
+      if ('met' === datatype) {
+        return [
+        new Date]
       }
 
       if ('waterlevel' === datatype) {
