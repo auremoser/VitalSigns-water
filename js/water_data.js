@@ -2,46 +2,89 @@
   'use strict';
   window.chart = new Highcharts.StockChart({
       chart: {
-          renderTo: 'graph'
+          renderTo: 'graph',
+          spacingTop: 15,
+          backgroundColor: '#ffefb1'
       },
       colors: [
       // colors taken from the palette on this site: http://vitalsigns.org/
       // '#FFCC33', '#4E733D', '#C04420', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
       '#051036', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
       ],
+      rangeSelector: {
+        buttons: [{
+            type: 'month',
+            count: 1,
+            text: '1M'
+        }, {
+            type: 'month',
+            count: 3,
+            text: '3M'
+        }, {
+            type: 'year',
+            count: 1,
+            text: '1Y'
+        }, {
+            type: 'all',
+            text: 'All'
+        }],
+        buttonSpacing: 2,
+        buttonTheme: { // styles for the buttons
+          fill: 'none',
+          stroke: 'none',
+          'stroke-width': 0,
+          r: 8,
+          style: {
+            color: '#6E9962',
+            fontWeight: 'bold'
+          },
+          states: {
+            hover: {
+            },
+            select: {
+              fill: '#6E9962',
+              style: {
+                color: 'white'
+              }
+            }
+          }
+        },
+        inputBoxBorderColor: '#6E9962'
+      },
       title: {
-          text: 'Environmental Reading at Gauging Station - TZA'
+        text: 'Environmental Reading at Gauging Station - TZA'
       },
       subtitle: {
-          text: 'rainfall, water-level, dmf, temperature'
+        text: ''
       },
       credits: {
-      enabled: false
+        enabled: false
       },
       xAxis: {
-          type: 'datetime',
-          dateTimeLabelFormats: { // don't display the dummy year
-              month: '%e. %b',
-              year: '%b'
-          },
-          title: {
-              text: 'Date'
-          }
+        type: 'datetime',
+        dateTimeLabelFormats: { // don't display the dummy year
+            month: '%e. %b',
+            year: '%b'
+        },
+        title: {
+            text: 'Date'
+        }
       },
       yAxis: {
-          title: {
-              text: 'Values'
-          },
-          min: 0
+        title: {
+            text: 'Values'
+        },
+        min: 0
       },
       tooltip: {
-          headerFormat: '<b>{series.name}</b><br>',
-          pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+        headerFormat: '<b>{series.name}</b><br>',
+        pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
       },
 
       series: [{
-          // Define the data points.
-          name: ''
+        // Define the data points.
+        name: ''
       }]
+
   });
 })();

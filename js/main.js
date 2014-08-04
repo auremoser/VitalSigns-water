@@ -1,10 +1,21 @@
+'use strict'
+
+var units = {
+  'dmf': 'Discharge [m3/s]',
+  'met': 'Discharge [m3/s]',
+  'waterlevel': 'Discharge [m]',
+  'rain': 'Rain [mm]',
+  'temperature': 'Temperature [°C]',
+}
+
+var preloader = new Preloader();
+var mapping = {};
+
 function main() {
   var map;
-  var mapping = {};
   var CLICKLAYER = 2;
-  var preloader = new Preloader();
 
-  loadFile('data/mapping.json', mapping);
+  loadFile('data/mapping.json');
 
   // create google maps map
   var mapOptions = {
@@ -35,7 +46,8 @@ function main() {
     var sublayer = layer.getSubLayer(CLICKLAYER);
 
     sublayer.on('featureClick', function(e, pos, latlng, data) {
-      cartodb.log.log(e, pos, latlng, data);
+      // cartodb.log(e, pos, latlng, data);
+      console.log(e, pos, latlng, data);
       loadPoint(data)
     })
 
@@ -45,70 +57,6 @@ function main() {
       "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
       "datatype": "waterlevel"
     })
-
-
-
-    function loadPoint(data) {
-
-      var ID = data.scn;
-      var fileName =window.mapping[ID][0].file;
-
-      if (fileName) {
-
-        preloader.show();
-
-        var url = "data/stations/" + fileName
-        console.log("loading", url);
-        $.ajax({
-          url: url,
-          error: function(err) {
-            preloader.hide();
-            throw new Error(err)
-          },
-          success: function(fileData) {
-
-            console.log("loaded", fileData.slice(0, 100))
-
-            var cleanData = fileData.split("\n")
-              // .slice(0, 10)
-
-              .map(function(row) {
-                row = row.split(",")
-                // console.log(row)
-                var date, value
-
-                if (['dmf'].indexOf(data.datatype) >= 0) {
-                  return [
-                    new Date(row[0]),
-                    +row[1]
-                  ]
-                }
-
-                if (['waterlevel'].indexOf(data.datatype) >= 0) {
-                  return [
-                    new Date(row[0] + ' ' + row[1]),
-                    +row[2]
-                  ]
-                }
-                console.log("don't know", data.datatype, row)
-              })
-              .filter(function(row) {
-                return row[1];
-              })
-
-            console.log(data);
-            console.log(cleanData);
-
-            chart.series[0].setData(cleanData);
-            // chart.legend.allItems[0].update({name: data.datatype});
-            // chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
-            // chart.setTitle(null, { text: data.basin_name + " - " + data.scn});
-            preloader.hide();
-          }
-        })
-
-      } else console.error('NO FILENAME')
-    }
 
     sublayer.on('error', function(err) {
       cartodb.log.log('error: ' + err);
@@ -121,6 +69,87 @@ function main() {
 
 }
 
+function loadPoint(data) {
+
+  var ID = data.scn;
+
+  console.log(data)
+  console.log(mapping[ID])
+
+  // TODO allow user to pick when more than one type of reading
+  var reading = mapping[ID][0];
+
+  var fileName = reading.file;
+
+  if (fileName) {
+    preloader.show();
+
+    var url = "data/stations/" + fileName
+    console.log("loading", url);
+    $.ajax({
+      url: url,
+      error: function(err) {
+        preloader.hide();
+        throw new Error(err)
+      },
+      success: function(fileData) {
+        preloader.hide();
+
+        console.log("loaded", fileData.slice(0, 100))
+
+        var cleanedData = cleanData(fileData, reading.datatype)
+
+        // console.log(data);
+        // console.log(cleanedData);
+
+        chart.series[0].setData(cleanedData);
+        chart.legend.allItems[0].update({name: data.datatype});
+        chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
+        chart.setTitle(null, { text: data.basin_name + " - " + data.scn});
+      }
+    })
+
+  } else console.error('NO FILENAME')
+}
+
+function cleanData(fileData, datatype) {
+  console.log('cleanData', datatype)
+  return fileData.split("\n")
+    // .slice(0, 10)
+    .map(function(row) {
+      row = row.split(",")
+      // console.log(row)
+      var date, value
+
+      if ('dmf' === datatype) {
+        return [
+          new Date(row[0]),
+          +row[1]
+        ]
+      }
+
+      if ('waterlevel' === datatype) {
+        return [
+          // new Date(row[0] + ' ' + row[1]),
+          (new Date(row[0])).getTime(),
+          +row[1]
+        ]
+      }
+
+      if ('rain' === datatype) {
+        return [
+          // new Date(row[0] + ' ' + row[1]),
+          (new Date(row[0])).getTime(),
+          +row[1]
+        ]
+      }
+      // console.log("don't know", datatype, row)
+    })
+    .filter(function(row) {
+      return row[1];
+    })
+}
+
 function Preloader(){
   this.show = function(){
     $("body").css("cursor", "wait");
@@ -131,25 +160,17 @@ function Preloader(){
   }
 }
 
-function loadFile(url, mapping){
+function loadFile(url){
   $.ajax({
     url:url,
     error:function(err){
       throw new Error(err)
     },
     success:function(data){
-      window.mapping = data;
+      mapping = data;
       console.log(mapping)
     }
   })
 }
 
-var units = {
-  'dmf': 'Discharge [m3/s]',
-  'met': 'Discharge [m3/s]',
-  'waterlevel': 'Discharge [m]',
-  'rain': 'Rain [mm]',
-  'temperature': 'Temperature [°C]',
-}
-
-window.onload = main;
+$(main);
