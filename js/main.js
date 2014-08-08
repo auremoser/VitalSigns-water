@@ -118,41 +118,12 @@ function cleanData(fileData, datatype) {
   return fileData.split("\n")
     // .slice(0, 10)
     .map(function(row) {
-      row = row.split(",")
+      var cells = row.split(",")
       // console.log(row)
-      var date, value
-
-      if ('dmf' === datatype) {
-        return [
-          new Date(row[0]),
-          +row[1]
-        ]
-      }
-
-      if ('met' === datatype) {
-        return [
-        new Date]
-      }
-
-      if ('waterlevel' === datatype) {
-        return [
-          // new Date(row[0] + ' ' + row[1]),
-          (new Date(row[0])).getTime(),
-          +row[1]
-        ]
-      }
-
-      if ('rain' === datatype) {
-        return [
-          // new Date(row[0] + ' ' + row[1]),
-          (new Date(row[0])).getTime(),
-          +row[1]
-        ]
-      }
+      var date = new Date(Date.parse(cells[0])).getTime()
+      var value = parseFloat(cells[1], 10)
+      return [date, value]
       // console.log("don't know", datatype, row)
-    })
-    .filter(function(row) {
-      return row[1];
     })
 }
 

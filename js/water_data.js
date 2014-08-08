@@ -5,12 +5,12 @@
           renderTo: 'graph',
           spacingTop: 10,
           spacingBottom: 5,
-          backgroundColor: '#ffefb1'
+          backgroundColor: '#fff'
       },
       colors: [
       // colors taken from the palette on this site: http://vitalsigns.org/
       // '#FFCC33', '#4E733D', '#C04420', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
-      '#051036', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
+      '#051036', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59', '#666', '#fff'
       ],
       legend: {
         enabled: true,
@@ -50,21 +50,21 @@
           'stroke-width': 0,
           r: 8,
           style: {
-            color: '#6E9962',
+            color: '#666',
             fontWeight: 'bold'
           },
           states: {
             hover: {
             },
             select: {
-              fill: '#6E9962',
+              fill: '#9DCBDA',
               style: {
-                color: 'white'
+                color: '#fff'
               }
             }
           }
         },
-        inputBoxBorderColor: '#6E9962'
+        inputBoxBorderColor: '#666'
       },
       title: {
         text: 'Environmental Reading at Gauging Station - TZA'
@@ -97,6 +97,19 @@
 
       series: [{
         // Define the data points.
+        fillColor : {
+          linearGradient : {
+            x1: 0,
+            y1: 0,
+            x2: 0,
+            y2: 1
+          },
+          stops : [
+            [0, Highcharts.getOptions().colors[0]],
+            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+          ]
+        },
+        threshold: null
       }]
 
   });

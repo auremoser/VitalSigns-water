@@ -7,6 +7,51 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <style>
+
+    /*CUSTOM FONTS*/
+      @font-face {
+        font-family: 'Flama';
+        src: url('fonts/Flama-Book.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Flama';
+        font-weight: bold;
+        src: url('fonts/Flama-Bold.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Flama';
+        font-weight: italic;
+        src: url('fonts/Flama-BookItalic.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Flama'
+        font-weight: medium;
+        src: url('fonts/Flama-Medium.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Korolev';
+        font-weight: bold;
+        src: url('fonts/Korolev Bold Condensed.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Korolev';
+        font-weight: light;
+        src: url('fonts/Korolev Light Condensed.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Korolev';
+        font-weight: medium;
+        src: url('fonts/Korolev Medium Condensed.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue';
+        src: url('fonts/HelveticaNeue.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue';
+        font-weight: bold;
+        src: url('fonts/HelveticaNeue-Bold.otf') format('opentype');
+      }
       html, body {
         height: 100%;
         padding: 0;
@@ -19,7 +64,7 @@
         font-weight: normal;
         font-size: 20px;
         line-height: 22px;
-        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica-Neue', sans-serif;
       }
       /* ungrid.css (97 bytes minified) */
       @media (min-width: 30em) {
@@ -32,10 +77,11 @@
         padding-bottom: 10px;
         text-align: center;
         text-transform: uppercase;
-        background-color: #ffefb1;
+        color: #666;
+        background-color: #fff;
         font-weight: bold;
         font-size: 24px;
-        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica-Neue', sans-serif;
       }
       #map {
         height: 52%;
@@ -50,7 +96,6 @@
         right: 0;
         bottom: 0;
         height: 40%;
-        /*width: 85%;*/
       }
       #menu {
         position: absolute;
@@ -58,8 +103,7 @@
         right: 0;
         bottom: 0;
         height: 40%;
-        /*width: 15%;*/
-        background-color: #3E7BB6;
+        background-color: #fff;
         text-align: center;
       }
       .menuLinks ul{
@@ -69,22 +113,21 @@
         list-style-type: none;
       }
       .menuLinks ul li a {
-        color: #333333;
+        color: #666;
         padding-top: 25px;
         padding-bottom: 25px;
         width: 100%;
         display: inline-block;
         text-transform: uppercase;
         text-decoration: none;
-        font-weight: bold;
         font-size: 18px;
-        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica-Neue', sans-serif;
       }
       .menuLinks ul li a:visited {
         color: #fffff;
       }
       .menuLinks ul li a:hover, .menu_simple ul li .current {
-        color: #fffff;
+        color: #fff;
         background-color: #5f94c8;
       }
     </style>
