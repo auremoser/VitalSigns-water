@@ -101,11 +101,11 @@ function loadPoint(data) {
 
         var cleanedData = cleanData(fileData, reading.datatype)
 
-        // console.log(data);
+        console.log(data);
         // console.log(cleanedData);
 
         chart.series[0].setData(cleanedData);
-        chart.series[0].name = data.datatype
+        chart.series[0].name = data.datatype;
         chart.legend.allItems[0].update({name: data.datatype});
         chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
         chart.setTitle(null, { text: data.basin_name + " - " + data.scn});

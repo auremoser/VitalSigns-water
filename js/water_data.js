@@ -3,6 +3,7 @@
   window.chart = new Highcharts.StockChart({
       chart: {
           renderTo: 'graph',
+          type: 'area',
           spacingTop: 10,
           spacingBottom: 5,
           backgroundColor: '#fff'
