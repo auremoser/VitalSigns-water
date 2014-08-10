@@ -29,21 +29,6 @@
         src: url('fonts/Flama-Medium.otf') format('opentype');
       }
       @font-face {
-        font-family: 'Korolev';
-        font-weight: bold;
-        src: url('fonts/Korolev Bold Condensed.otf') format('opentype');
-      }
-      @font-face {
-        font-family: 'Korolev';
-        font-weight: light;
-        src: url('fonts/Korolev Light Condensed.otf') format('opentype');
-      }
-      @font-face {
-        font-family: 'Korolev';
-        font-weight: medium;
-        src: url('fonts/Korolev Medium Condensed.otf') format('opentype');
-      }
-      @font-face {
         font-family: 'Helvetica-Neue';
         src: url('fonts/HelveticaNeue.otf') format('opentype');
       }
@@ -51,6 +36,44 @@
         font-family: 'Helvetica-Neue';
         font-weight: bold;
         src: url('fonts/HelveticaNeue-Bold.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue-Condensed';
+        font-stretch: condensed;
+        src: url('fonts/HelveticaNeue-CondensedBlack.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue-Condensed';
+        font-weight: bold;
+        font-style: condensed;
+        src: url('fonts/HelveticaNeue-CondensedBold.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue';
+        font-style: italic;
+        src: url('fonts/HelveticaNeue-Italic.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue-Light';
+        src: url('fonts/HelveticaNeue-Light.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue-Light';
+        font-style: italic;
+        src: url('fonts/HelveticaNeue-LightItalic.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue-Med';
+        src: url('fonts/HelveticaNeue-Medium.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue-Ultralight';
+        src: url('fonts/HelveticaNeue-UltraLight.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Helvetica-Neue-Ultralight';
+        font-style: italic;
+        src: url('fonts/HelveticaNeue-UltraLightItalic.otf') format('opentype');
       }
       html, body {
         height: 100%;
@@ -64,7 +87,7 @@
         font-weight: normal;
         font-size: 20px;
         line-height: 22px;
-        font-family: 'Helvetica-Neue', sans-serif;
+        font-family: 'Helvetica-Neue-Ultralight', sans-serif;
       }
       /* ungrid.css (97 bytes minified) */
       @media (min-width: 30em) {
@@ -81,11 +104,13 @@
         background-color: #fff;
         font-weight: bold;
         font-size: 24px;
-        font-family: 'Helvetica-Neue', sans-serif;
+        font-family: 'Helvetica-Neue-Light', sans-serif;
       }
       #map {
+        position: absolute;
+        left: 0;
+        right: 0;
         height: 52%;
-        width: 100%;
         background-image: url(assets/preview.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -97,7 +122,7 @@
         bottom: 0;
         height: 40%;
       }
-      #menu {
+/*      #menu {
         position: absolute;
         left: 0;
         right: 0;
@@ -105,8 +130,8 @@
         height: 40%;
         background-color: #fff;
         text-align: center;
-      }
-      .menuLinks ul{
+      }*/
+      /*.menuLinks ul{
         margin: 0;
         padding: 0;
         width: 100%;
@@ -129,7 +154,7 @@
       .menuLinks ul li a:hover, .menu_simple ul li .current {
         color: #fff;
         background-color: #5f94c8;
-      }
+      }*/
     </style>
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
@@ -137,22 +162,11 @@
   <body>
     <div id="title" class="row">Water Availability</div>
     <div id="map" class="row" style="width: 100%"></div>
-    <div class="row">
-      <div id="graph" class="col" style="width: 80%"></div>
-      <div id="menu" class="col menuLinks" style="width: 20%">
-        <ul>
-          <li><a href="#">Water Level</a></li>
-          <li><a href="#">Water Flow</a></li>
-          <li><a href="#">Temp</a></li>
-          <li><a href="#">Rain</a></li>
-        </ul>
-      </div>
-    </div>
+    <div id="graph" class="row" style="width: 100%"></div>
 
 
     <!-- include jquery and highstock (faster than highcharts) -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <!-- // <script src="js/vendor/highcharts.js"></script> -->
     <script src="js/vendor/highstock.js"></script>
     <script type="text/javascript" src="js/water_data.js"></script>
     <!-- include google maps library *before* load cartodb.js -->

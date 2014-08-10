@@ -1,9 +1,9 @@
 'use strict'
 
 var units = {
-  'dmf': 'Discharge [m3/s]',
-  'met': 'Discharge [m3/s]',
-  'waterlevel': 'Discharge [m]',
+  'dmf': 'Water Flow [m3/s]',
+  'met': 'Rain [mm]',
+  'waterlevel': 'WaterLevel [m]',
   'rain': 'Rain [mm]',
   'temperature': 'Temperature [°C]',
 }
