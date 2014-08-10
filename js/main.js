@@ -57,7 +57,7 @@ function main() {
       "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
       // "scn": "1KA59",
       // "basin_water_office_data_filename": "Great Ruaha at Msembe water level.txt",
-      "datatype": "waterlevel"
+      "datatypes": "waterlevel"
     })
 
     sublayer.on('error', function(err) {
@@ -105,9 +105,11 @@ function loadPoint(data) {
         // console.log(cleanedData);
 
         chart.series[0].setData(cleanedData);
-        chart.series[0].name = data.datatype;
-        chart.legend.allItems[0].update({name: data.datatype});
-        chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
+        chart.series[0].update({
+            name: reading.datatype
+        });
+        chart.legend.allItems[0].update({name: reading.datatype});
+        chart.yAxis[0].axisTitle.attr({text: units[reading.datatype]});
         chart.setTitle(null, { text: data.basin_name + " - " + data.scn});
       }
     })
