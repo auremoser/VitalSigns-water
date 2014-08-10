@@ -55,6 +55,8 @@ function main() {
       "basin_name": "Rufiji Basin",
       "scn": "1KA31",
       "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
+      // "scn": "1KA59",
+      // "basin_water_office_data_filename": "Great Ruaha at Msembe water level.txt",
       "datatype": "waterlevel"
     })
 
@@ -95,7 +97,7 @@ function loadPoint(data) {
       success: function(fileData) {
         preloader.hide();
 
-        console.log("loaded", fileData.slice(0, 100))
+        console.log("loaded", fileData.slice(-100))
 
         var cleanedData = cleanData(fileData, reading.datatype)
 
@@ -120,8 +122,9 @@ function cleanData(fileData, datatype) {
     .map(function(row) {
       var cells = row.split(",")
       // console.log(row)
-      var date = new Date(Date.parse(cells[0])).getTime()
-      var value = parseFloat(cells[1], 10)
+      // var date = new Date(Date.parse(cells[0])).getTime()
+      var date = parseInt(cells[0])
+      var value = parseFloat(cells[1])
       return [date, value]
       // console.log("don't know", datatype, row)
     })
