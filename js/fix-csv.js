@@ -27,15 +27,15 @@ stationFiles.forEach(function(stationFile) {
 		// console.log(cells[0])
 		var date, value
 		if (timeRegEx.test(cells[1])) {
-			// TODO parse time in to date as well
-			date = new Date(Date.parse(cells[0]))
+			// has time as well
+			var dateStr = cells[0] + ' ' + cells[1]
+			date = Date.parse(dateStr)
 			value = cells[2]
 		} else {
 			// no time
-			date = new Date(Date.parse(cells[0]))
+			date = Date.parse(cells[0])
 			value = cells[1]
 		}
-		date = date.toISOString().slice(0, 10)
 		return [date, value]
 	})
 	rows = _.compact(rows)
