@@ -1,7 +1,7 @@
 'use strict'
 
 var units = {
-  'dmf': 'Water Flow [m3/s]',
+  'dmf': 'WaterFlow [m3/s]',
   'met': 'Rain [mm]',
   'waterlevel': 'WaterLevel [m]',
   'rain': 'Rain [mm]',
