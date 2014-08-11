@@ -87,7 +87,7 @@
         font-weight: normal;
         font-size: 20px;
         line-height: 22px;
-        font-family: 'Helvetica-Neue-Ultralight', sans-serif;
+        font-family: 'Helvetica-Neue', sans-serif;
       }
       /* ungrid.css (97 bytes minified) */
       @media (min-width: 30em) {
@@ -103,7 +103,7 @@
         color: #666;
         background-color: #fff;
         font-size: 24px;
-        font-family: 'Helvetica-Neue-Light', sans-serif;
+        font-family: 'Helvetica-Neue', sans-serif;
       }
       #map {
         position: absolute;
@@ -121,12 +121,19 @@
         left: 0;
         right: 0;
         top: 64%;
+        width: 100%;
         overflow-y: scroll;
 
       }
-      #graph-1, #graph-2 {
+      #graph-1 {
         height: 270px;
         display: none;
+        border-left: 8px solid #9DCBDA;
+      }
+      #graph-2 {
+        height: 270px;
+        display: none;
+        border-left: 8px solid #6E9962;
       }
 
     </style>
@@ -134,10 +141,11 @@
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
   </head>
   <body>
-    <div id="title" class="row"><b>Water</b> Availability</div>
+    <div id="title" class="row"><b>Water </b>Availability</div>
     <div id="map" class="row" style="width: 100%"></div>
     <div id="graphs">
       <div id="graph-1" class="row"></div>
+      <hr>
       <div id="graph-2" class="row"></div>
     </div>
 
