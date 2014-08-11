@@ -1,9 +1,9 @@
 'use strict'
 
 var units = {
-  'dmf': 'Discharge [m3/s]',
-  'met': 'Discharge [m3/s]',
-  'waterlevel': 'Discharge [m]',
+  'dmf': 'WaterFlow [m3/s]',
+  'met': 'Rain [mm]',
+  'waterlevel': 'WaterLevel [m]',
   'rain': 'Rain [mm]',
   'temperature': 'Temperature [°C]',
 }
@@ -46,17 +46,27 @@ function main() {
     var sublayer = layer.getSubLayer(CLICKLAYER);
 
     sublayer.on('featureClick', function(e, pos, latlng, data) {
-      // cartodb.log(e, pos, latlng, data);
-      console.log(e, pos, latlng, data);
-      loadPoint(data)
+      // console.log(e, pos, latlng, data);
+      // if graph == to 1, show, if not, don't show 2nd
+      var readings = mapping[data.scn];
+      $('#graph-1').show()
+      $('#graph-2').toggle(readings.length !== 1)
+
+      readings.forEach(function(r, i) {
+        r.scn = data.scn
+        r.basin_name = data.basin_name
+        loadPoint(r, i)
+      })
     })
 
-    loadPoint({
-      "basin_name": "Rufiji Basin",
-      "scn": "1KA31",
-      "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
-      "datatype": "waterlevel"
-    })
+    // loadPoint({
+    //   "basin_name": "Rufiji Basin",
+    //   "scn": "1KA31",
+    //   "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
+    //   // "scn": "1KA59",
+    //   // "basin_water_office_data_filename": "Great Ruaha at Msembe water level.txt",
+    //   "datatypes": "waterlevel"
+    // })
 
     sublayer.on('error', function(err) {
       cartodb.log.log('error: ' + err);
@@ -69,17 +79,11 @@ function main() {
 
 }
 
-function loadPoint(data) {
-
-  var ID = data.scn;
-
-  console.log(data)
-  console.log(mapping[ID])
-
-  // TODO allow user to pick when more than one type of reading
-  var reading = mapping[ID][0];
+function loadPoint(reading, index) {
 
   var fileName = reading.file;
+
+  var drawChart = index == 0 ? chart : chart2
 
   if (fileName) {
     preloader.show();
@@ -95,18 +99,22 @@ function loadPoint(data) {
       success: function(fileData) {
         preloader.hide();
 
-        console.log("loaded", fileData.slice(0, 100))
+        // console.log("loaded", fileData.slice(-100))
 
         var cleanedData = cleanData(fileData, reading.datatype)
 
-        // console.log(data);
+        console.log(reading);
+        // console.log(cleanedData);
+        // console.log(drawChart);
+        // console.log(drawChart.renderTo);
+        // console.log(reading);
         // console.log(cleanedData);
 
-        chart.series[0].setData(cleanedData);
-        chart.series[0].name = data.datatype
-        chart.legend.allItems[0].update({name: data.datatype});
-        chart.yAxis[0].axisTitle.attr({text: units[data.datatype]});
-        chart.setTitle(null, { text: data.basin_name + " - " + data.scn});
+        drawChart.series[0].setData(cleanedData);
+        drawChart.series[0].update({name: reading.datatype});
+        drawChart.legend.allItems[0].update({name: reading.datatype});
+        drawChart.yAxis[0].axisTitle.attr({text: units[reading.datatype]});
+        drawChart.setTitle(null, { text: reading.basin_name + " - " + reading.scn});
       }
     })
 
@@ -118,41 +126,13 @@ function cleanData(fileData, datatype) {
   return fileData.split("\n")
     // .slice(0, 10)
     .map(function(row) {
-      row = row.split(",")
+      var cells = row.split(",")
       // console.log(row)
-      var date, value
-
-      if ('dmf' === datatype) {
-        return [
-          new Date(row[0]),
-          +row[1]
-        ]
-      }
-
-      if ('met' === datatype) {
-        return [
-        new Date]
-      }
-
-      if ('waterlevel' === datatype) {
-        return [
-          // new Date(row[0] + ' ' + row[1]),
-          (new Date(row[0])).getTime(),
-          +row[1]
-        ]
-      }
-
-      if ('rain' === datatype) {
-        return [
-          // new Date(row[0] + ' ' + row[1]),
-          (new Date(row[0])).getTime(),
-          +row[1]
-        ]
-      }
+      // var date = new Date(Date.parse(cells[0])).getTime()
+      var date = parseInt(cells[0])
+      var value = parseFloat(cells[1])
+      return [date, value]
       // console.log("don't know", datatype, row)
-    })
-    .filter(function(row) {
-      return row[1];
     })
 }
 
@@ -174,7 +154,7 @@ function loadFile(url){
     },
     success:function(data){
       mapping = data;
-      console.log(mapping)
+      // console.log(mapping)
     }
   })
 }
