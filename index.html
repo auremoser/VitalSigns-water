@@ -116,12 +116,6 @@
         background-repeat: no-repeat;
         z-index: 99999;
       }
-       #graph {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 40%;
-      }
 /*      #menu {
         position: absolute;
         left: 0;
@@ -155,6 +149,20 @@
         color: #fff;
         background-color: #5f94c8;
       }*/
+      #graphs {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 60%;
+        overflow-y: scroll;
+
+      }
+      #graph-1, #graph-2 {
+        height: 262px;
+        display: none;
+      }
+
     </style>
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
@@ -162,18 +170,20 @@
   <body>
     <div id="title" class="row"><b>Water</b> Availability</div>
     <div id="map" class="row" style="width: 100%"></div>
-    <div id="graph" class="row" style="width: 100%"></div>
-
+    <div id="graphs">
+      <div id="graph-1" class="row"></div>
+      <div id="graph-2" class="row"></div>
+    </div>
 
     <!-- include jquery and highstock (faster than highcharts) -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/vendor/highstock.js"></script>
+    <script src="js/vendor/underscore-min.js"></script>
     <script type="text/javascript" src="js/water_data.js"></script>
     <!-- include google maps library *before* load cartodb.js -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <!-- include cartodb.js library -->
     <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
-
     <script src="js/main.js"></script>
 
   </body>
