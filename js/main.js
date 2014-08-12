@@ -20,10 +20,17 @@ function main() {
 
   loadFile('data/mapping.json');
 
+  // var box = vis.addOverlay({
+  //   width: 200, // width of the box
+  //   position: 'top|right' // top, bottom, left and right are available
+  // });
+
   // create google maps map
   var mapOptions = {
-    zoom: 6,
-    center: new google.maps.LatLng(-8.222, 38.122),
+    // zoom projection was previously a more-zoomed-out 6
+    zoom: 7,
+    // set projection to situate tanzania a little higher
+    center: new google.maps.LatLng(-10.222, 36.122),
     mapTypeId: google.maps.MapTypeId.TERRAIN,
     // remove poi popups from google maps
     styles: [
