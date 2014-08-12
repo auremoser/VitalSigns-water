@@ -76,7 +76,7 @@
         src: url('fonts/HelveticaNeue-UltraLightItalic.otf') format('opentype');
       }
       html, body {
-        height: 98%;
+        height: 100%;
         padding: 0;
         margin: 0;
       }
@@ -121,7 +121,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        top: 64%;
+        top: 63%;
         width: 100%;
         overflow-y: scroll;
         display:none;
@@ -139,10 +139,6 @@
         border-left: 8px solid #6E9962;
         padding-bottom: 2px;
       }
-      .cartodb-tooltip p {
-         position: top;
-      }
-
       .inset{
         -moz-box-sizing:    border-box;
         -webkit-box-sizing: border-box;
@@ -163,6 +159,12 @@
         position: relative;
         margin-top: 60px;
       }*/
+      .highcharts-input-group text{
+          text-anchor: end;
+      }
+      .highcharts-input-group text tspan{
+          text-anchor: middle;
+      }
     </style>
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />

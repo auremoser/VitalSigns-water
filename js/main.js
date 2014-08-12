@@ -134,6 +134,13 @@ function loadPoint(reading, index) {
 
   } else console.error('NO FILENAME')
 }
+// Fix weird offset issue with the buttons in graph 1
+$('.highcharts-button').each(function(){
+           var transform = $(this).attr('transform'),
+                   coords = transform.replace('translate','').replace('\(','').replace('\)','').split(',');
+           var new_x = +coords[0] + 20;
+           $(this).attr('transform', 'translate('+new_x+','+coords[1]+')')
+       })
 
 function cleanData(fileData, datatype) {
   console.log('cleanData', datatype)
