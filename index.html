@@ -126,30 +126,34 @@
         overflow-y: scroll;
         display:none;
       }
-
       #graph-1 {
-        height: 270px;
+        height: 292px;
         display: none;
         border-left: 8px solid #9DCBDA;
+        padding-bottom: 2px;
 
       }
       #graph-2 {
-        height: 270px;
+        height: 292px;
         display: none;
         border-left: 8px solid #6E9962;
+        padding-bottom: 2px;
+      }
+      .cartodb-tooltip p {
+         position: top;
       }
 
       .inset{
         -moz-box-sizing:    border-box;
-         -webkit-box-sizing: border-box;
-        box-sizing:        border-box;
+        -webkit-box-sizing: border-box;
+         box-sizing:        border-box;
       }
 
       /*#stats{
         position: absolute;
         z-index: 99999;
         width: 300px;
-        height: 400px;
+        height: 200px;
         right:200px;
         top:45px;
         background-color: #000;
@@ -165,21 +169,21 @@
   </head>
   <body>
 
-    <!--div id="stats">
+    <!-- <div id="stats">
       <div class='menu'>
         <ul>
           <li>A</li>
           <li>B</li>
         </ul>
       </div>
-    </div-->
+    </div> -->
 
-    <div id="title" class="row"><b>Water </b>Availability</div>
+    <div id="title" class="row"><b>Water</b>Availability</div>
 
     <div id="map" class="row" style="width: 100%"></div>
     <div id="graphs">
       <div id="graph-1" class="row inset"></div>
-      <hr>
+      <br>
       <div id="graph-2" class="row inset"></div>
     </div>
 
