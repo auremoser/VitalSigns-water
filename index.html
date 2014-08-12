@@ -109,11 +109,12 @@
         position: absolute;
         left: 0;
         right: 0;
-        height: 58%;
+        /*height: 58%;*/
+        height: 100%;
         background-image: url(assets/preview.png);
         background-size: contain;
         background-repeat: no-repeat;
-        z-index: 99999;
+        z-index: 88888;
       }
       #graphs {
         position: absolute;
@@ -123,12 +124,14 @@
         top: 64%;
         width: 100%;
         overflow-y: scroll;
-
+        display:none;
       }
+
       #graph-1 {
         height: 270px;
         display: none;
         border-left: 8px solid #9DCBDA;
+
       }
       #graph-2 {
         height: 270px;
@@ -136,17 +139,48 @@
         border-left: 8px solid #6E9962;
       }
 
+      .inset{
+        -moz-box-sizing:    border-box;
+         -webkit-box-sizing: border-box;
+        box-sizing:        border-box;
+      }
+
+      /*#stats{
+        position: absolute;
+        z-index: 99999;
+        width: 300px;
+        height: 400px;
+        right:200px;
+        top:45px;
+        background-color: #000;
+        opacity: 0.3;
+      }
+      .menu{
+        position: relative;
+        margin-top: 60px;
+      }*/
     </style>
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
   </head>
   <body>
+
+    <!--div id="stats">
+      <div class='menu'>
+        <ul>
+          <li>A</li>
+          <li>B</li>
+        </ul>
+      </div>
+    </div-->
+
     <div id="title" class="row"><b>Water </b>Availability</div>
+
     <div id="map" class="row" style="width: 100%"></div>
     <div id="graphs">
-      <div id="graph-1" class="row"></div>
+      <div id="graph-1" class="row inset"></div>
       <hr>
-      <div id="graph-2" class="row"></div>
+      <div id="graph-2" class="row inset"></div>
     </div>
 
     <!-- include jquery and highstock (faster than highcharts) -->

@@ -15,6 +15,9 @@ function main() {
   var map;
   var CLICKLAYER = 2;
 
+
+  $('#map').height($('body').height());
+
   loadFile('data/mapping.json');
 
   // create google maps map
@@ -98,7 +101,6 @@ function loadPoint(reading, index) {
       },
       success: function(fileData) {
         preloader.hide();
-
         // console.log("loaded", fileData.slice(-100))
 
         var cleanedData = cleanData(fileData, reading.datatype)
@@ -115,6 +117,16 @@ function loadPoint(reading, index) {
         drawChart.legend.allItems[0].update({name: reading.datatype});
         drawChart.yAxis[0].axisTitle.attr({text: units[reading.datatype]});
         drawChart.setTitle(null, { text: reading.basin_name + " - " + reading.scn});
+
+        if(! $('#graphs').is(":visible")){
+          $('#graphs').show(function(){
+            // $('#map').animate({height:'58%'});
+            var h = $('body').height() * .58;
+            $('#map').animate({height:h});
+          });
+
+          google.maps.event.trigger(map, 'resize');
+        }
       }
     })
 
