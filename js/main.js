@@ -20,11 +20,6 @@ function main() {
 
   loadFile('data/mapping.json');
 
-  // var box = vis.addOverlay({
-  //   width: 200, // width of the box
-  //   position: 'top|right' // top, bottom, left and right are available
-  // });
-
   // create google maps map
   var mapOptions = {
     // zoom projection was previously a more-zoomed-out 6

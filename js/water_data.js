@@ -54,6 +54,7 @@
         buttonTheme: { // styles for the buttons
           fill: 'none',
           stroke: 'none',
+          // width: 20,
           'stroke-width': 0,
           r: 8,
           style: {
