@@ -33,8 +33,12 @@
       },
       rangeSelector: {
         enabled: true,
-        // buttonSpacing: 3,
         buttons: [{
+            type: 'month',
+            count: 1,
+            text: ' '
+        },
+        {
             type: 'month',
             count: 1,
             text: '1M'
