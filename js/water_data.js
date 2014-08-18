@@ -1,18 +1,22 @@
 (function() {
   'use strict';
-
+// CHART I
   window.chart = new Highcharts.StockChart({
       chart: {
           renderTo: 'graph-1',
           type: 'area',
           spacingTop: 10,
           spacingBottom: 5,
-          backgroundColor: '#fff'
+          backgroundColor: '#fff',
+          style: {
+            fontFamily: '"Helvetica-Neue-Light", Helvetica, sans-serif', // default font
+            fontSize: '12px'
+          }
       },
       colors: [
       // colors taken from the palette on this site: http://vitalsigns.org/
       // '#FFCC33', '#4E733D', '#C04420', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
-      '#051036', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59', '#666', '#fff'
+      '#051036', '#9DCBDA', '#FBD8DB', '#fc8d59', '#666', '#fff'
       ],
       legend: {
         enabled: true,
@@ -32,6 +36,11 @@
         buttons: [{
             type: 'month',
             count: 1,
+            text: ' '
+        },
+        {
+            type: 'month',
+            count: 1,
             text: '1M'
         }, {
             type: 'month',
@@ -49,6 +58,7 @@
         buttonTheme: { // styles for the buttons
           fill: 'none',
           stroke: 'none',
+          // width: 20,
           'stroke-width': 0,
           r: 8,
           style: {
@@ -115,18 +125,22 @@
       }]
   });
 
-
+// CHART II
   window.chart2 = new Highcharts.StockChart({
       chart: {
           renderTo: 'graph-2',
           type: 'area',
           spacingTop: 10,
           spacingBottom: 5,
-          backgroundColor: '#fff'
+          backgroundColor: '#fff',
+          style: {
+            fontFamily: '"Helvetica-Neue-Light", Helvetica, sans-serif', // default font
+            fontSize: '12px'
+          }
       },
       colors: [
       // colors taken from the palette on this site: http://vitalsigns.org/
-      // '#FFCC33', '#4E733D', '#C04420', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
+      // '#FFCC33', '#4E733D', '#C04420', '#6E9962', '#71a658', '#8db879', '#9DCBDA', '#FBD8DB', '#fc8d59'
       '#051036', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59', '#666', '#fff'
       ],
       legend: {
@@ -137,7 +151,14 @@
       navigator: {
         enabled: true,
         height: 20,
-        margin: 0
+        margin: 0,
+        maskFill: 'rgba(212, 228, 205, 0.95)'
+      },
+      plotOptions: {
+        series: {
+          color: '#6E9962',
+          lineColor: '#6E9962'
+        }
       },
       scrollbar: {
         enabled: false
@@ -174,14 +195,14 @@
             hover: {
             },
             select: {
-              fill: '#9DCBDA',
+              fill: '#71a658',
               style: {
                 color: '#fff'
               }
             }
           }
         },
-        inputBoxBorderColor: '#666'
+        inputBoxBorderColor: '#71a658'
       },
       title: {
         text: 'Environmental Reading at Gauging Station - TZA'
@@ -210,6 +231,7 @@
       },
       tooltip: {
         pointFormat: '{series.name}: <b>{point.y:.2f}</b><br>',
+        borderColor: '#71a658'
       },
 
       series: [{
@@ -222,8 +244,8 @@
             y2: 1
           },
           stops : [
-            [0, Highcharts.getOptions().colors[0]],
-            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+            [0, 'rgb(156,192,138)'],
+            [1, 'rgba(212,228,205,0.75)']
           ]
         },
         threshold: null

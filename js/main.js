@@ -15,12 +15,17 @@ function main() {
   var map;
   var CLICKLAYER = 2;
 
+
+  $('#map').height($('body').height());
+
   loadFile('data/mapping.json');
 
   // create google maps map
   var mapOptions = {
-    zoom: 6,
-    center: new google.maps.LatLng(-8.222, 38.122),
+    // zoom projection was previously a more-zoomed-out 6
+    zoom: 7,
+    // set projection to situate tanzania a little higher
+    center: new google.maps.LatLng(-10.222, 36.122),
     mapTypeId: google.maps.MapTypeId.TERRAIN,
     // remove poi popups from google maps
     styles: [
@@ -98,7 +103,6 @@ function loadPoint(reading, index) {
       },
       success: function(fileData) {
         preloader.hide();
-
         // console.log("loaded", fileData.slice(-100))
 
         var cleanedData = cleanData(fileData, reading.datatype)
@@ -115,11 +119,30 @@ function loadPoint(reading, index) {
         drawChart.legend.allItems[0].update({name: reading.datatype});
         drawChart.yAxis[0].axisTitle.attr({text: units[reading.datatype]});
         drawChart.setTitle(null, { text: reading.basin_name + " - " + reading.scn});
+
+        if(! $('#graphs').is(":visible")){
+          $('#graphs').show(function(){
+            // $('#map').animate({height:'58%'});
+            var h = $('body').height() * .58;
+            $('#map').animate({height:h});
+          });
+
+          google.maps.event.trigger(map, 'resize');
+        }
       }
     })
 
   } else console.error('NO FILENAME')
 }
+// Fix weird offset issue with the buttons in graph 1
+$($('.highcharts-button')[0]).each(
+// $('#graph-1 .highcharts-button').each(
+  function(){
+    var transform = $(this).attr('transform'),
+        coords = transform.replace('translate','').replace('\(','').replace('\)','').split(',');
+    var new_x = +coords[0] + 100;
+  $(this).attr('transform', 'translate('+new_x+','+coords[1]+')')
+})
 
 function cleanData(fileData, datatype) {
   console.log('cleanData', datatype)
