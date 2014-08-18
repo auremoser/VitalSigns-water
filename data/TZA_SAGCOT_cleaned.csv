@@ -1,170 +1,1 @@
-basin name,scn,region name,location name,latitude,longitude,altitude,established,number,data,datatypes
-Rufiji Basin,1KB19,Hagafiro,Hagafiro,-9.5083,34.8167,,,57,true,dmf
-Rufiji Basin,1KB2,Kilombero,Ifakara,-8.15,36.6333,,,43,true,"met, rain"
-Rufiji Basin,1KB26,Kiberege,Kiberege D/S,-8.0722,37.0167,,,61,true,"waterlevel, waterlevel"
-Rufiji Basin,1KB31,Kig.Ruaha,Lugema(Mshongo),-8.7667,35.3333,,,67,true,waterlevel
-Rufiji Basin,1KB4,Kilombero,Ifwema,-9.0167,36.0056,,,44,true,waterlevel
-Rufiji Basin,1KB17,Kilombero,Swero,-8.2,37,,,53,true,"dmf, waterlevel"
-Rufiji Basin,1KB14A,Lumemo,Kiburubutu,-8.1222,36.7222,,,49,true,"dmf, waterlevel"
-Rufiji Basin,1KB12A,Mchilipa,U/S Utete,-8.7611,36.4778,,,48,true,waterlevel
-Rufiji Basin,1KB15,Mgeta,D/S Mchombe Mis,-8.3333,36.1167,,,50,true,"dmf, waterlevel"
-Rufiji Basin,1KB9,Mnyera,U/S Taveta Miss,-9.0167,35.5167,,,46,true,"waterlevel, waterlevel"
-Rufiji Basin,1KB8,Mpanga,Mpanga Mission,-8.9778,35.9278,,,45,true,"dmf, waterlevel"
-Rufiji Basin,1KB18,Ruhudji,Njombe,-9.4,34.8333,,,55,true,"rain, temperature"
-Rufiji Basin,1KB18B,Ruhudji,B/L Kifung'a F.,-9.2833,34.8333,,,56,true,"dmf, waterlevel"
-Rufiji Basin,1KB30,Ruhudji,Idonya Falls,-9.35,35.1667,,,66,true,waterlevel
-Rufiji Basin,1KB24,Sanje,Sanje,-7.6333,37.0111,,,59,true,waterlevel
-Rufiji Basin,1KB23,Sonjo,Sonjo,-7.8,36.9667,,,58,true,waterlevel
-Rufiji Basin,1KA59,Gt. Ruaha,Msembe,-7.75,34.9,,,35,true,"dmf, waterlevel"
-Rufiji Basin,1KA8A,Gt. Ruaha,Salimwani,-8.9,37.1167,,,9,true,"dmf, waterlevel"
-Rufiji Basin,1KA9,Kimani,Gt.N.Road,-9.85,34.1833,,,10,true,"dmf, waterlevel"
-Rufiji Basin,1KA32A,Lt. Ruaha,Makalala,-8.3333,35.3333,,,22,true,"dmf, waterlevel"
-Rufiji Basin,1KA31,Lt. Ruaha,Mawande,-7.5,35.5,,,21,true,"dmf, waterlevel"
-Rufiji Basin,1KA2A,Lt. Ruaha,Iringa Ndiuka,-7.7833,35.7167,,,5,true,"dmf, waterlevel"
-Rufiji Basin,1KA11A,Mbarali,Igawa,-8.7833,34.3667,,,12,true,"dmf, waterlevel"
-Rufiji Basin,1KA15A,Ndembera,Ilonga,-8.2833,35.3111,,,14,true,"dmf, waterlevel"
-Lake Nyasa Basin,unknown1,Kilondo,Kilondo,-9.7333,34.3,,,,false,
-Lake Nyasa Basin,unknown2,Kitewaka,Muhumbi D/S,-10.25,34.8,,,,false,
-Lake Nyasa Basin,unknown3,Kitewaka,Maboga,-9.8833,34.8,,,,false,
-Lake Nyasa Basin,unknown4,Kiwira,Kyela Ipyana,-9.6167,33.8667,,,,false,
-Lake Nyasa Basin,unknown5,Kiwira,Natural Bridge,-9.2667,33.55,,,,false,
-Lake Nyasa Basin,unknown6,Kiwira,u/s Kiwira Vil.,-9.1667,33.5333,,,,false,
-Lake Nyasa Basin,unknown7,L.Nyasa,Nsungu,-10.4667,34.5833,,,,false,
-Lake Nyasa Basin,unknown8,L.Nyasa,Itungi Port,-9.75,33.95,,,,false,
-Lake Nyasa Basin,unknown9,Lufirio,Lufirio,-9.3167,33.9167,,,,false,
-Lake Nyasa Basin,unknown10,Lumbila,Lumbila,-9.5833,34.15,,,,false,
-Lake Nyasa Basin,unknown11,Mbaka,Mwaya,-9.55,33.8833,,,,false,
-Lake Nyasa Basin,unknown12,Nyitule,Idope,-9.2833,33.9667,,,,false,
-Lake Nyasa Basin,unknown13,Ruhuhu,Kikonge,-10.4333,34.8,,,,false,
-Lake Nyasa Basin,unknown14,Ruhuhu,Masigira conf.,-9.9333,35.1833,,,,false,
-Lake Nyasa Basin,unknown15,Rumakali,Humage,-9.3333,34.0333,,,,false,
-Lake Nyasa Basin,unknown16,Rutakira,New Rd.Brg/s,-10.3,35.1333,,,,false,
-Lake Nyasa Basin,unknown17,Songwe,Kasumulu,-9.5833,33.6667,,,,false,
-Lake Rukwa Basin,3E2A,Kikamba,D/S Kapalala,-8.05,32.6333,,,33,false,
-Lake Rukwa Basin,3B1,L.Rukwa,Mbagala,-8.3667,32.8667,,,11,false,
-Lake Rukwa Basin,3CD2A,Luiche,Kizungu,-7.7167,31.6167,,,27,false,
-Lake Rukwa Basin,3CD2,Luiche,Usia,-7.7167,31.6167,,,26,false,
-Lake Rukwa Basin,3.00E+01,Luika,Luika,-8.4,32.9167,,,32,false,
-Lake Rukwa Basin,3C5,Lukima,US Rungwa Vil.,-7.25,31.6667,,,20,false,
-Lake Rukwa Basin,3.00E+08,Lukwate,Mkunda Hill,-7.7,32.45,,,36,false,
-Lake Rukwa Basin,3A18,Lupa,Lupa Tingatinga,-8.0167,33.2833,,,10,false,
-Lake Rukwa Basin,3A15,Lupa,Itigi Road,-7.95,33.4167,,,7,false,
-Lake Rukwa Basin,3A16A,Lupa,Lupa Market,-7.95,33,,,8,false,
-Lake Rukwa Basin,3CC2,Mfwizi,Mtatumbila,-7.55,31.1667,,,23,false,
-Lake Rukwa Basin,3CC3,Mfwizi,Paramawe,-7.2833,31.0833,,,24,false,
-Lake Rukwa Basin,3DA4,Mise,Ijajiri,-7.2333,32.9917,,,31,false,
-Lake Rukwa Basin,3A14A,Mlowu,Gt.North Rd.,-9,33,,,6,false,
-Lake Rukwa Basin,3B2,Momba,DS con Mtembwa,-8.6833,32.3833,,,12,false,
-Lake Rukwa Basin,3B8,Mpemba,Gt.North Rd.,-9.2333,32.8333,,,14,false,
-Lake Rukwa Basin,3B13,Mpemba,Kombe,-8.9833,32.6333,,,15,false,
-Lake Rukwa Basin,3B15,Mtembwa,Kapoma,-8.7833,32.3667,,,17,false,
-Lake Rukwa Basin,3B15A,Mtembwa,Luashod/Skapoma,-8.7333,32.3333,,,18,false,
-Lake Rukwa Basin,3CD1,Muse,US Muse Vill.,-7.7167,31.5333,,,25,false,
-Lake Rukwa Basin,3DA2,Muse,Msisi,-6.9444,33.4333,,,29,false,
-Lake Rukwa Basin,3B14,Mviko,Kaziala,-9.1333,32.6333,,,16,false,
-Lake Rukwa Basin,3A8,Myovisi,Gt.North Rd.,-8.9833,33.0667,,,5,false,
-Lake Rukwa Basin,3DA3,Piti,Mtambalawa,-7.4833,33.4167,,,30,false,
-Lake Rukwa Basin,3A7A,Ruanda,US Gt.N.Road,-9.1,33.95,,,4,false,
-Lake Rukwa Basin,3D4,Rungwa,Makongolos/Itig,-6.9333,33.625,,,28,false,
-Lake Rukwa Basin,3B6,Saisi,Momba,-8.7333,31.9833,,,13,false,
-Lake Rukwa Basin,3B16A,Samvia,Yunga,-8.4,31.1333,,,19,false,
-Lake Rukwa Basin,3A2A,Songwe,Iwe,-8.9,33.2167,,,1,false,
-Lake Rukwa Basin,3A17,Songwe,Igalula,-8.6,33.1167,,,9,false,
-Lake Rukwa Basin,3.00E+04,Wuku,Mkamba,-7.7333,32.1833,,,34,false,
-Lake Rukwa Basin,3.00E+05,Yeye,Kolole,-7.6,32.05,,,35,false,
-Lake Tanganyika Basin,4H1,Kalambo,Kalambo Falls,-8.6,31.2944,,,,false,
-Lake Tanganyika Basin,4G2A,Luamfi,Masolo,-7.4667,30.7333,,,,false,
-Lake Tanganyika Basin,4AH21,Miungu,Magawe,-6.6667,33.4167,,,,false,
-Lake Tanganyika Basin,4AH17,Mungo,Miungu,-6.6806,33.7,,,,false,
-Lake Tanganyika Basin,4AH20,Nkululu,Magawe,-6.65,33.45,,,,false,
-Lake Tanganyika Basin,4G3,Samba,Masolo,-7.4667,30.7889,,,,false,
-Rufiji Basin,1KA62,Bubu,Chiboli,-6.7833,35.7667,,,37,false,
-Rufiji Basin,1KA58A,Chabi,Chabi,-7.3833,36.5333,,,34,false,
-Rufiji Basin,1KA7A,Chimala,Chitekelo,-8.9167,33.9667,,,8,false,
-Rufiji Basin,1KA64,Fufu,Fufu,-6.7333,35.9167,,,39,false,
-Rufiji Basin,1KB16,Furua,Malinyi Mission,-8.9722,36.1889,,,52,false,
-Rufiji Basin,1KA27,Gt. Ruaha,Hausmanns Br Mk,-8,34.5833,,,20,false,
-Rufiji Basin,1KA61,Gt. Ruaha,Gorge,-7.5833,36.7833,,,36,false,
-Rufiji Basin,1KA3A,Gt. Ruaha,Kidatu,-7.2389,37.1389,,,6,false,
-Rufiji Basin,1KA5,Gt. Ruaha,Mtera,-7.0833,35.9833,,,7,false,
-Rufiji Basin,1KA12,Halali,D/S Iyayi,-8.85,34.5667,,,13,false,
-Rufiji Basin,1KA23A,Hukuni,Iyayi,-8.9333,34.6333,,,19,false,
-Rufiji Basin,1KA45A,Ipatagwa,Gt. N.Road,-8.8167,33.6667,,,29,false,
-Rufiji Basin,1KA42,Kisigo,Kinuguru,-6.9667,35.4167,,,28,false,
-Rufiji Basin,1KA16,Liosi,Igulusi,-8.8333,33.85,,,15,false,
-Rufiji Basin,1KA39A,Lt. Ruaha,U/S Iwawa,-8.05,35.6833,,,26,false,
-Rufiji Basin,1KA21A,Lt.Ruaha,Ihimbu,-7.8833,35.8,,,17,false,
-Rufiji Basin,1KB29,Luhombero,Luhombero,-8.7444,37.1778,,,65,false,
-Rufiji Basin,1KA37A,Lukosi,Mtandika,-7.5667,36.4333,,,24,false,
-Rufiji Basin,1KA16A,Lunwa,Igurusi,-8.9194,33.9556,,,16,false,
-Rufiji Basin,1KA67,Mamio,Kalanzi,-8.8889,33.85,,,42,false,
-Rufiji Basin,1KA65,Meta,Napunga,-8.8167,33.9,,,40,false,
-Rufiji Basin,1KB15A,Mgeta,U/S Bridge,-8.3611,36.1111,,,51,false,
-Rufiji Basin,1KA10A,Mlomboji,Mlomboji,-8.7833,34.35,,,11,false,
-Rufiji Basin,1KA66,Mlowo,Ilongo,-8.8389,33.8333,,,41,false,
-Rufiji Basin,1KA50B,Mswiswi,Wilima,-8.8694,33.7667,,,31,false,
-Rufiji Basin,1KA50A,Mswiswi,Wilima,-8.7833,33.8667,,,30,false,
-Rufiji Basin,1KA22,Mtitu,Mtitu,-8.0167,35.7833,,,18,false,
-Rufiji Basin,1KA57A,Mwega,Malolo,-7.4,36.6,,,33,false,
-Rufiji Basin,1KB25,Nangaje,Nangaje,-8.1167,36.6833,,,60,false,
-Rufiji Basin,1KA33A,Ndembera,Madibira,-8.2333,34.8,,,23,false,
-Rufiji Basin,1KA63,Nyabu,Loje,-6.8667,35.9333,,,38,false,
-Rufiji Basin,1KA56,Ruaha,Malangali,-8.6333,34.85,,,32,false,
-Rufiji Basin,1K4A,Rufiji,D/S Utete,-8,38.75,,,3,false,
-Rufiji Basin,1K3A,Rufiji,Pangani Rapids,-7.8167,37.95,,,2,false,
-Rufiji Basin,1K3,Rufiji,Stiegler's Gorg,-7.8,37.9167,,,1,false,
-Rufiji Basin,1K7,Rufiji,Kidai Ferry,-7.7833,35.95,,,4,false,
-Rufiji Basin,1KB18A,Ruhudji,Njombe,-9.4,34.8333,,,55,false,
-Rufiji Basin,1KB10,Ruhudji,Mwayamulungu,-8.95,36.9833,,,47,false,
-Rufiji Basin,1KB27,Ruipa,Mbingu,-8.2722,36.3583,,,63,false,
-Rufiji Basin,1KA51A,Urobo,Gt. N.Road,-8.8167,33.6667,,,31,false,
-Rufiji Basin,1KA38A,Yovi,Gt.Ruaha conf.,-7.5667,36.7833,,,25,false,
-"Wami, Ruva and Coast",1G11,Chogoali,Difulu Village,-6.2306,37.4389,,,5,false,
-"Wami, Ruva and Coast",1GB1A,Diwale,Ngomeni,-6.1667,37.6167,,,8,false,
-"Wami, Ruva and Coast",1GD17,Kinyasungw,e Godegode,-6.5333,36.6167,,,12,false,
-"Wami, Ruva and Coast",1GD14,Kinyasungw,e Gulwe,-6.4333,35.4167,,,10,false,
-"Wami, Ruva and Coast",1G6,Kisangata,Mvumi,-6.6167,37.1833,,,4,false,
-"Wami, Ruva and Coast",1J5,Kizinga,Mbagala/Buza,-6.8333,39.3167,,,33,false,
-"Wami, Ruva and Coast",1J8,L.Manze,Mkenge,-6.8333,39.3333,,,36,false,
-"Wami, Ruva and Coast",1DG30,Lumuma,Kilimalulu,-6.6833,36.6667,,,15,false,
-"Wami, Ruva and Coast",1J7,Mbezi,Bigwa D/S,-7.2,39.1333,,,35,false,
-"Wami, Ruva and Coast",1GD31,Mdukwe,Mdukwe,-6.9611,36.9333,,,16,false,
-"Wami, Ruva and Coast",1HB2,Mgeta,Mgeta,-7.0722,37.5944,,,30,false,
-"Wami, Ruva and Coast",1GD36,Mkata,Mkata,-6.8806,37.3861,,,21,false,
-"Wami, Ruva and Coast",1GD32,Mkondoa,Railway Bridge,-6.8556,37.05,,,17,false,
-"Wami, Ruva and Coast",1GD2,Mkondoa,Kilosa,-6.8333,37,,,9,false,
-"Wami, Ruva and Coast",1GD29,Mkondoa,Mbarahwe,-6.7083,36.7833,,,14,false,
-"Wami, Ruva and Coast",1HA8A,Morogoro,Morogoro,-7.0028,37.7167,,,27,false,
-"Wami, Ruva and Coast",1HC2A,Mvuha,Tulo School,-7.2333,37.9,,,32,false,
-"Wami, Ruva and Coast",1HC2,Mvuha,Ngagama,-7.2278,37.8917,,,31,false,
-"Wami, Ruva and Coast",1GA2,Mziha,Mziha,-6.9,37.7833,,,7,false,
-"Wami, Ruva and Coast",1J9A,Mzinga,Kichemichemi,-6.9167,39.3,,,37,false,
-"Wami, Ruva and Coast",1HA1A,Ngerengere,U/S Utari Br,-7.0333,38.3667,,,26,false,
-"Wami, Ruva and Coast",1HA15,Ngerengere,Mgude,-6.8667,38.2139,,,29,false,
-"Wami, Ruva and Coast",1HA9A,Ngerengere,Konga,-6.7,37.9167,,,28,false,
-"Wami, Ruva and Coast",1H10,Ruvu,Mikula,-7.3,38.1667,,,25,false,
-"Wami, Ruva and Coast",1H5,Ruvu,Kibungo,-7.0167,37.8,,,23,false,
-"Wami, Ruva and Coast",1H8,Ruvu,Morogoro Rd.Br,-6.7389,38.8361,,,24,false,
-"Wami, Ruva and Coast",1G5A,Tami,Msowero,-6.5222,37.3139,,,3,false,
-"Wami, Ruva and Coast",1G1,Wami,Dakawa,-6.4333,37.5333,,,1,false,
-"Wami, Ruva and Coast",1G2,Wami,Mandera,-6.2333,38.4,,,2,false,
-Rufiji Basin,unknown18,Kihansi,Lugoda,-8.62,-35.9,,,,true,waterlevel
-Rufiji Basin,unknown19,Kihansi,Lugoda,-8.62,-35.9,,,,false,
-Rufiji Basin,unknown20,Kihansi,Lutaki,-8.55,-35.9,,,,false,
-Rufiji Basin,unknown21,Kihansi,Lutaki,-8.55,-35.9,,,,true,waterlevel
-Rufiji Basin,unknown22,Kihansi,Lutaki,-8.55,-35.9,,,,true,dmf
-Rufiji Basin,unknown23,Kilombero,Ifakara Ferry,-8.15,36.6,,,,false,
-Rufiji Basin,unknown24,Kilombero,Ifakara Ferry,-8.15,36.6,,,,true,waterlevel
-Rufiji Basin,unknown25,Lumemo,Lumemo Met Station,-8.17,36.6,,,,false,
-Rufiji Basin,unknown26,Lumemo,Lumemo Met Station,-8.17,36.6,,,,true,rain
-Rufiji Basin,unknown27,Mapanda,Mapanda Automet,-8.42,35.76,,,,false,
-Rufiji Basin,unknown28,Mapanda,Mapanda Automet,-8.42,35.76,,,,true,rain
-Rufiji Basin,unknown29,Tanganyika,Tanganyika Wattle,-9.23,34.9,,,,false,
-Rufiji Basin,unknown30,Tanganyika,Tanganyika Wattle,-9.23,34.9,,,,true,rain
-Rufiji Basin,unknown31,Taveta,Taveta Mission,-9.02,35.5,,,,false,
-Rufiji Basin,unknown32,Taveta,Taveta Mission,-9.02,35.5,,,,true,rain
-Rufiji Basin,unknown33,Udzungwa,Udzungwa Automet,-8.13,39.18,,,,false,
-Rufiji Basin,unknown34,Udzungwa,Udzungwa Automet,-8.13,39.18,,,,true,rain
-Rufiji Basin,unknown35,Uhafiwa,Uhafiwa Automet,-8.52,35.9,,,,false,
-Rufiji Basin,unknown36,Uhafiwa,Uhafiwa Automet,-8.52,35.9,,,,true,rain
-Rufiji Basin,unknown37,Uhafiwa,Uhafiwa Automet,-8.52,35.9,,,,true,rain
+basin name,scn,region name,location name,latitude,longitude,altitude,established,number,data,datatypesRufiji Basin,1KB19,Hagafiro,Hagafiro,-9.5083,34.8167,,,57,TRUE,dmfRufiji Basin,1KB2,Kilombero,Ifakara,-8.15,36.6333,,,43,TRUE,"met, rain"Rufiji Basin,1KB26,Kiberege,Kiberege D/S,-8.0722,37.0167,,,61,TRUE,"waterlevel, waterlevel"Rufiji Basin,1KB31,Kig.Ruaha,Lugema(Mshongo),-8.7667,35.3333,,,67,TRUE,waterlevelRufiji Basin,1KB4,Kilombero,Ifwema,-9.0167,36.0056,,,44,TRUE,waterlevelRufiji Basin,1KB17,Kilombero,Swero,-8.2,37,,,53,TRUE,"dmf, waterlevel"Rufiji Basin,1KB14A,Lumemo,Kiburubutu,-8.1222,36.7222,,,49,TRUE,"dmf, waterlevel"Rufiji Basin,1KB12A,Mchilipa,U/S Utete,-8.7611,36.4778,,,48,TRUE,waterlevelRufiji Basin,1KB15,Mgeta,D/S Mchombe Mis,-8.3333,36.1167,,,50,TRUE,"dmf, waterlevel"Rufiji Basin,1KB9,Mnyera,U/S Taveta Miss,-9.0167,35.5167,,,46,TRUE,"waterlevel, waterlevel"Rufiji Basin,1KB8,Mpanga,Mpanga Mission,-8.9778,35.9278,,,45,TRUE,"dmf, waterlevel"Rufiji Basin,1KB18,Ruhudji,Njombe,-9.4,34.8333,,,55,TRUE,"rain, temperature"Rufiji Basin,1KB18B,Ruhudji,B/L Kifung'a F.,-9.2833,34.8333,,,56,TRUE,"dmf, waterlevel"Rufiji Basin,1KB30,Ruhudji,Idonya Falls,-9.35,35.1667,,,66,TRUE,waterlevelRufiji Basin,1KB24,Sanje,Sanje,-7.6333,37.0111,,,59,TRUE,waterlevelRufiji Basin,1KB23,Sonjo,Sonjo,-7.8,36.9667,,,58,TRUE,waterlevelRufiji Basin,1KA59,Gt. Ruaha,Msembe,-7.75,34.9,,,35,TRUE,"dmf, waterlevel"Rufiji Basin,1KA8A,Gt. Ruaha,Salimwani,-8.9,37.1167,,,9,TRUE,"dmf, waterlevel"Rufiji Basin,1KA9,Kimani,Gt.N.Road,-9.85,34.1833,,,10,TRUE,"dmf, waterlevel"Rufiji Basin,1KA32A,Lt. Ruaha,Makalala,-8.3333,35.3333,,,22,TRUE,"dmf, waterlevel"Rufiji Basin,1KA31,Lt. Ruaha,Mawande,-7.5,35.5,,,21,TRUE,"dmf, waterlevel"Rufiji Basin,1KA2A,Lt. Ruaha,Iringa Ndiuka,-7.7833,35.7167,,,5,TRUE,"dmf, waterlevel"Rufiji Basin,1KA11A,Mbarali,Igawa,-8.7833,34.3667,,,12,TRUE,"dmf, waterlevel"Rufiji Basin,1KA15A,Ndembera,Ilonga,-8.2833,35.3111,,,14,TRUE,"dmf, waterlevel"Lake Nyasa Basin,unknown1,Kilondo,Kilondo,-9.7333,34.3,,,,FALSE,Lake Nyasa Basin,unknown2,Kitewaka,Muhumbi D/S,-10.25,34.8,,,,FALSE,Lake Nyasa Basin,unknown3,Kitewaka,Maboga,-9.8833,34.8,,,,FALSE,Lake Nyasa Basin,unknown4,Kiwira,Kyela Ipyana,-9.6167,33.8667,,,,FALSE,Lake Nyasa Basin,unknown5,Kiwira,Natural Bridge,-9.2667,33.55,,,,FALSE,Lake Nyasa Basin,unknown6,Kiwira,u/s Kiwira Vil.,-9.1667,33.5333,,,,FALSE,Lake Nyasa Basin,unknown7,L.Nyasa,Nsungu,-10.4667,34.5833,,,,FALSE,Lake Nyasa Basin,unknown8,L.Nyasa,Itungi Port,-9.75,33.95,,,,FALSE,Lake Nyasa Basin,unknown9,Lufirio,Lufirio,-9.3167,33.9167,,,,FALSE,Lake Nyasa Basin,unknown10,Lumbila,Lumbila,-9.5833,34.15,,,,FALSE,Lake Nyasa Basin,unknown11,Mbaka,Mwaya,-9.55,33.8833,,,,FALSE,Lake Nyasa Basin,unknown12,Nyitule,Idope,-9.2833,33.9667,,,,FALSE,Lake Nyasa Basin,unknown13,Ruhuhu,Kikonge,-10.4333,34.8,,,,FALSE,Lake Nyasa Basin,unknown14,Ruhuhu,Masigira conf.,-9.9333,35.1833,,,,FALSE,Lake Nyasa Basin,unknown15,Rumakali,Humage,-9.3333,34.0333,,,,FALSE,Lake Nyasa Basin,unknown16,Rutakira,New Rd.Brg/s,-10.3,35.1333,,,,FALSE,Lake Nyasa Basin,unknown17,Songwe,Kasumulu,-9.5833,33.6667,,,,FALSE,Lake Rukwa Basin,3E2A,Kikamba,D/S Kapalala,-8.05,32.6333,,,33,FALSE,Lake Rukwa Basin,3B1,L.Rukwa,Mbagala,-8.3667,32.8667,,,11,FALSE,Lake Rukwa Basin,3CD2A,Luiche,Kizungu,-7.7167,31.6167,,,27,FALSE,Lake Rukwa Basin,3CD2,Luiche,Usia,-7.7167,31.6167,,,26,FALSE,Lake Rukwa Basin,3.00E+01,Luika,Luika,-8.4,32.9167,,,32,FALSE,Lake Rukwa Basin,3C5,Lukima,US Rungwa Vil.,-7.25,31.6667,,,20,FALSE,Lake Rukwa Basin,3.00E+08,Lukwate,Mkunda Hill,-7.7,32.45,,,36,FALSE,Lake Rukwa Basin,3A18,Lupa,Lupa Tingatinga,-8.0167,33.2833,,,10,FALSE,Lake Rukwa Basin,3A15,Lupa,Itigi Road,-7.95,33.4167,,,7,FALSE,Lake Rukwa Basin,3A16A,Lupa,Lupa Market,-7.95,33,,,8,FALSE,Lake Rukwa Basin,3CC2,Mfwizi,Mtatumbila,-7.55,31.1667,,,23,FALSE,Lake Rukwa Basin,3CC3,Mfwizi,Paramawe,-7.2833,31.0833,,,24,FALSE,Lake Rukwa Basin,3DA4,Mise,Ijajiri,-7.2333,32.9917,,,31,FALSE,Lake Rukwa Basin,3A14A,Mlowu,Gt.North Rd.,-9,33,,,6,FALSE,Lake Rukwa Basin,3B2,Momba,DS con Mtembwa,-8.6833,32.3833,,,12,FALSE,Lake Rukwa Basin,3B8,Mpemba,Gt.North Rd.,-9.2333,32.8333,,,14,FALSE,Lake Rukwa Basin,3B13,Mpemba,Kombe,-8.9833,32.6333,,,15,FALSE,Lake Rukwa Basin,3B15,Mtembwa,Kapoma,-8.7833,32.3667,,,17,FALSE,Lake Rukwa Basin,3B15A,Mtembwa,Luashod/Skapoma,-8.7333,32.3333,,,18,FALSE,Lake Rukwa Basin,3CD1,Muse,US Muse Vill.,-7.7167,31.5333,,,25,FALSE,Lake Rukwa Basin,3DA2,Muse,Msisi,-6.9444,33.4333,,,29,FALSE,Lake Rukwa Basin,3B14,Mviko,Kaziala,-9.1333,32.6333,,,16,FALSE,Lake Rukwa Basin,3A8,Myovisi,Gt.North Rd.,-8.9833,33.0667,,,5,FALSE,Lake Rukwa Basin,3DA3,Piti,Mtambalawa,-7.4833,33.4167,,,30,FALSE,Lake Rukwa Basin,3A7A,Ruanda,US Gt.N.Road,-9.1,33.95,,,4,FALSE,Lake Rukwa Basin,3D4,Rungwa,Makongolos/Itig,-6.9333,33.625,,,28,FALSE,Lake Rukwa Basin,3B6,Saisi,Momba,-8.7333,31.9833,,,13,FALSE,Lake Rukwa Basin,3B16A,Samvia,Yunga,-8.4,31.1333,,,19,FALSE,Lake Rukwa Basin,3A2A,Songwe,Iwe,-8.9,33.2167,,,1,FALSE,Lake Rukwa Basin,3A17,Songwe,Igalula,-8.6,33.1167,,,9,FALSE,Lake Rukwa Basin,3.00E+04,Wuku,Mkamba,-7.7333,32.1833,,,34,FALSE,Lake Rukwa Basin,3.00E+05,Yeye,Kolole,-7.6,32.05,,,35,FALSE,Lake Tanganyika Basin,4H1,Kalambo,Kalambo Falls,-8.6,31.2944,,,,FALSE,Lake Tanganyika Basin,4G2A,Luamfi,Masolo,-7.4667,30.7333,,,,FALSE,Lake Tanganyika Basin,4AH21,Miungu,Magawe,-6.6667,33.4167,,,,FALSE,Lake Tanganyika Basin,4AH17,Mungo,Miungu,-6.6806,33.7,,,,FALSE,Lake Tanganyika Basin,4AH20,Nkululu,Magawe,-6.65,33.45,,,,FALSE,Lake Tanganyika Basin,4G3,Samba,Masolo,-7.4667,30.7889,,,,FALSE,Rufiji Basin,1KA62,Bubu,Chiboli,-6.7833,35.7667,,,37,FALSE,Rufiji Basin,1KA58A,Chabi,Chabi,-7.3833,36.5333,,,34,FALSE,Rufiji Basin,1KA7A,Chimala,Chitekelo,-8.9167,33.9667,,,8,FALSE,Rufiji Basin,1KA64,Fufu,Fufu,-6.7333,35.9167,,,39,FALSE,Rufiji Basin,1KB16,Furua,Malinyi Mission,-8.9722,36.1889,,,52,FALSE,Rufiji Basin,1KA27,Gt. Ruaha,Hausmanns Br Mk,-8,34.5833,,,20,FALSE,Rufiji Basin,1KA61,Gt. Ruaha,Gorge,-7.5833,36.7833,,,36,FALSE,Rufiji Basin,1KA3A,Gt. Ruaha,Kidatu,-7.2389,37.1389,,,6,FALSE,Rufiji Basin,1KA5,Gt. Ruaha,Mtera,-7.0833,35.9833,,,7,FALSE,Rufiji Basin,1KA12,Halali,D/S Iyayi,-8.85,34.5667,,,13,FALSE,Rufiji Basin,1KA23A,Hukuni,Iyayi,-8.9333,34.6333,,,19,FALSE,Rufiji Basin,1KA45A,Ipatagwa,Gt. N.Road,-8.8167,33.6667,,,29,FALSE,Rufiji Basin,1KA42,Kisigo,Kinuguru,-6.9667,35.4167,,,28,FALSE,Rufiji Basin,1KA16,Liosi,Igulusi,-8.8333,33.85,,,15,FALSE,Rufiji Basin,1KA39A,Lt. Ruaha,U/S Iwawa,-8.05,35.6833,,,26,FALSE,Rufiji Basin,1KA21A,Lt.Ruaha,Ihimbu,-7.8833,35.8,,,17,FALSE,Rufiji Basin,1KB29,Luhombero,Luhombero,-8.7444,37.1778,,,65,FALSE,Rufiji Basin,1KA37A,Lukosi,Mtandika,-7.5667,36.4333,,,24,FALSE,Rufiji Basin,1KA16A,Lunwa,Igurusi,-8.9194,33.9556,,,16,FALSE,Rufiji Basin,1KA67,Mamio,Kalanzi,-8.8889,33.85,,,42,FALSE,Rufiji Basin,1KA65,Meta,Napunga,-8.8167,33.9,,,40,FALSE,Rufiji Basin,1KB15A,Mgeta,U/S Bridge,-8.3611,36.1111,,,51,FALSE,Rufiji Basin,1KA10A,Mlomboji,Mlomboji,-8.7833,34.35,,,11,FALSE,Rufiji Basin,1KA66,Mlowo,Ilongo,-8.8389,33.8333,,,41,FALSE,Rufiji Basin,1KA50B,Mswiswi,Wilima,-8.8694,33.7667,,,31,FALSE,Rufiji Basin,1KA50A,Mswiswi,Wilima,-8.7833,33.8667,,,30,FALSE,Rufiji Basin,1KA22,Mtitu,Mtitu,-8.0167,35.7833,,,18,FALSE,Rufiji Basin,1KA57A,Mwega,Malolo,-7.4,36.6,,,33,FALSE,Rufiji Basin,1KB25,Nangaje,Nangaje,-8.1167,36.6833,,,60,FALSE,Rufiji Basin,1KA33A,Ndembera,Madibira,-8.2333,34.8,,,23,FALSE,Rufiji Basin,1KA63,Nyabu,Loje,-6.8667,35.9333,,,38,FALSE,Rufiji Basin,1KA56,Ruaha,Malangali,-8.6333,34.85,,,32,FALSE,Rufiji Basin,1K4A,Rufiji,D/S Utete,-8,38.75,,,3,FALSE,Rufiji Basin,1K3A,Rufiji,Pangani Rapids,-7.8167,37.95,,,2,FALSE,Rufiji Basin,1K3,Rufiji,Stiegler's Gorg,-7.8,37.9167,,,1,FALSE,Rufiji Basin,1K7,Rufiji,Kidai Ferry,-7.7833,35.95,,,4,FALSE,Rufiji Basin,1KB18A,Ruhudji,Njombe,-9.4,34.8333,,,55,FALSE,Rufiji Basin,1KB10,Ruhudji,Mwayamulungu,-8.95,36.9833,,,47,FALSE,Rufiji Basin,1KB27,Ruipa,Mbingu,-8.2722,36.3583,,,63,FALSE,Rufiji Basin,1KA51A,Urobo,Gt. N.Road,-8.8167,33.6667,,,31,FALSE,Rufiji Basin,1KA38A,Yovi,Gt.Ruaha conf.,-7.5667,36.7833,,,25,FALSE,"Wami, Ruva and Coast",1G11,Chogoali,Difulu Village,-6.2306,37.4389,,,5,FALSE,"Wami, Ruva and Coast",1GB1A,Diwale,Ngomeni,-6.1667,37.6167,,,8,FALSE,"Wami, Ruva and Coast",1GD17,Kinyasungw,e Godegode,-6.5333,36.6167,,,12,FALSE,"Wami, Ruva and Coast",1GD14,Kinyasungw,e Gulwe,-6.4333,35.4167,,,10,FALSE,"Wami, Ruva and Coast",1G6,Kisangata,Mvumi,-6.6167,37.1833,,,4,FALSE,"Wami, Ruva and Coast",1J5,Kizinga,Mbagala/Buza,-6.8333,39.3167,,,33,FALSE,"Wami, Ruva and Coast",1J8,L.Manze,Mkenge,-6.8333,39.3333,,,36,FALSE,"Wami, Ruva and Coast",1DG30,Lumuma,Kilimalulu,-6.6833,36.6667,,,15,FALSE,"Wami, Ruva and Coast",1J7,Mbezi,Bigwa D/S,-7.2,39.1333,,,35,FALSE,"Wami, Ruva and Coast",1GD31,Mdukwe,Mdukwe,-6.9611,36.9333,,,16,FALSE,"Wami, Ruva and Coast",1HB2,Mgeta,Mgeta,-7.0722,37.5944,,,30,FALSE,"Wami, Ruva and Coast",1GD36,Mkata,Mkata,-6.8806,37.3861,,,21,FALSE,"Wami, Ruva and Coast",1GD32,Mkondoa,Railway Bridge,-6.8556,37.05,,,17,FALSE,"Wami, Ruva and Coast",1GD2,Mkondoa,Kilosa,-6.8333,37,,,9,FALSE,"Wami, Ruva and Coast",1GD29,Mkondoa,Mbarahwe,-6.7083,36.7833,,,14,FALSE,"Wami, Ruva and Coast",1HA8A,Morogoro,Morogoro,-7.0028,37.7167,,,27,FALSE,"Wami, Ruva and Coast",1HC2A,Mvuha,Tulo School,-7.2333,37.9,,,32,FALSE,"Wami, Ruva and Coast",1HC2,Mvuha,Ngagama,-7.2278,37.8917,,,31,FALSE,"Wami, Ruva and Coast",1GA2,Mziha,Mziha,-6.9,37.7833,,,7,FALSE,"Wami, Ruva and Coast",1J9A,Mzinga,Kichemichemi,-6.9167,39.3,,,37,FALSE,"Wami, Ruva and Coast",1HA1A,Ngerengere,U/S Utari Br,-7.0333,38.3667,,,26,FALSE,"Wami, Ruva and Coast",1HA15,Ngerengere,Mgude,-6.8667,38.2139,,,29,FALSE,"Wami, Ruva and Coast",1HA9A,Ngerengere,Konga,-6.7,37.9167,,,28,FALSE,"Wami, Ruva and Coast",1H10,Ruvu,Mikula,-7.3,38.1667,,,25,FALSE,"Wami, Ruva and Coast",1H5,Ruvu,Kibungo,-7.0167,37.8,,,23,FALSE,"Wami, Ruva and Coast",1H8,Ruvu,Morogoro Rd.Br,-6.7389,38.8361,,,24,FALSE,"Wami, Ruva and Coast",1G5A,Tami,Msowero,-6.5222,37.3139,,,3,FALSE,"Wami, Ruva and Coast",1G1,Wami,Dakawa,-6.4333,37.5333,,,1,FALSE,"Wami, Ruva and Coast",1G2,Wami,Mandera,-6.2333,38.4,,,2,FALSE,Rufiji Basin,unknown18,Kihansi,Lugoda,-8.62,-35.9,,,,TRUE,waterlevelRufiji Basin,unknown19,Kihansi,Lugoda,-8.62,-35.9,,,,FALSE,Rufiji Basin,unknown20,Kihansi,Lutaki,-8.55,-35.9,,,,FALSE,Rufiji Basin,unknown21,Kihansi,Lutaki,-8.55,-35.9,,,,TRUE,waterlevelRufiji Basin,unknown22,Kihansi,Lutaki,-8.55,-35.9,,,,TRUE,dmfRufiji Basin,unknown23,Kilombero,Ifakara Ferry,-8.15,36.6,,,,FALSE,Rufiji Basin,unknown24,Kilombero,Ifakara Ferry,-8.15,36.6,,,,TRUE,waterlevelRufiji Basin,unknown25,Lumemo,Lumemo Met Station,-8.17,36.6,,,,FALSE,Rufiji Basin,unknown26,Lumemo,Lumemo Met Station,-8.17,36.6,,,,TRUE,rainRufiji Basin,unknown27,Mapanda,Mapanda Automet,-8.42,35.76,,,,FALSE,Rufiji Basin,unknown28,Mapanda,Mapanda Automet,-8.42,35.76,,,,TRUE,rainRufiji Basin,unknown29,Tanganyika,Tanganyika Wattle,-9.23,34.9,,,,FALSE,Rufiji Basin,unknown30,Tanganyika,Tanganyika Wattle,-9.23,34.9,,,,TRUE,rainRufiji Basin,unknown31,Taveta,Taveta Mission,-9.02,35.5,,,,FALSE,Rufiji Basin,unknown32,Taveta,Taveta Mission,-9.02,35.5,,,,TRUE,rainRufiji Basin,unknown33,Udzungwa,Udzungwa Automet,-8.13,39.18,,,,FALSE,Rufiji Basin,unknown34,Udzungwa,Udzungwa Automet,-8.13,39.18,,,,TRUE,rainRufiji Basin,unknown35,Uhafiwa,Uhafiwa Automet,-8.52,35.9,,,,FALSE,Rufiji Basin,unknown36,Uhafiwa,Uhafiwa Automet,-8.52,35.9,,,,TRUE,rainRufiji Basin,unknown37,Uhafiwa,Uhafiwa Automet,-8.52,35.9,,,,TRUE,rainRufiji Basin,unknown38,Kilombero,Idete Prison of Agriculture Bridge,-8.1,36.49,,,,FALSE,
