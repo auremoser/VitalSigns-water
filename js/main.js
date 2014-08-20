@@ -15,9 +15,6 @@ function main() {
   var map;
   var CLICKLAYER = 2;
 
-
-  $('#map').height($('body').height());
-
   loadFile('data/mapping.json');
 
   // create google maps map
@@ -123,8 +120,8 @@ function loadPoint(reading, index) {
         if(! $('#graphs').is(":visible")){
           $('#graphs').show(function(){
             // $('#map').animate({height:'58%'});
-            var h = $('body').height() * .58;
-            $('#map').animate({height:h});
+            $('#map').animate({bottom: "36%"});
+            $('#graphs').animate({top: "64%"});
           });
 
           google.maps.event.trigger(map, 'resize');
