@@ -24,6 +24,8 @@ function main() {
     // set projection to situate tanzania a little higher
     center: new google.maps.LatLng(-10.222, 36.122),
     mapTypeId: google.maps.MapTypeId.TERRAIN,
+    // cartodb_logo: true,
+    layer_selector: true,
     // remove poi popups from google maps
     styles: [
       {
@@ -60,15 +62,6 @@ function main() {
         loadPoint(r, i)
       })
     })
-
-    // loadPoint({
-    //   "basin_name": "Rufiji Basin",
-    //   "scn": "1KA31",
-    //   "basin_water_office_data_filename": "Little Ruaha at Mawande water level.txt",
-    //   // "scn": "1KA59",
-    //   // "basin_water_office_data_filename": "Great Ruaha at Msembe water level.txt",
-    //   "datatypes": "waterlevel"
-    // })
 
     sublayer.on('error', function(err) {
       cartodb.log.log('error: ' + err);

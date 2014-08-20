@@ -63,7 +63,8 @@
           r: 8,
           style: {
             color: '#666',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            fontSize: 10
           },
           states: {
             hover: {
@@ -76,7 +77,15 @@
             }
           }
         },
-        inputBoxBorderColor: '#666'
+        inputBoxBorderColor: '#666',
+        inputStyle: {
+          fontSize: 10
+        },
+        labelStyle: {
+          color: '#666',
+          fontWeight: 'bold',
+          fontSize: 11
+        }
       },
       title: {
         text: 'Environmental Reading at Gauging Station - TZA'
@@ -189,7 +198,8 @@
           r: 8,
           style: {
             color: '#666',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            fontSize: 10
           },
           states: {
             hover: {
@@ -202,8 +212,16 @@
             }
           }
         },
-        inputBoxBorderColor: '#71a658'
+      inputBoxBorderColor: '#71a658',
+      inputStyle: {
+        fontSize: 10
       },
+      labelStyle: {
+        color: '#71a658',
+        fontWeight: 'bold',
+        fontSize: 11
+      }
+    },
       title: {
         text: 'Environmental Reading at Gauging Station - TZA'
       },
