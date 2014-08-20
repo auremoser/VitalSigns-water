@@ -21,6 +21,7 @@ function main() {
   var mapOptions = {
     // zoom projection was previously a more-zoomed-out 6
     zoom: 7,
+    cartodb_logo: false,
     // set projection to situate tanzania a little higher
     center: new google.maps.LatLng(-10.222, 36.122),
     mapTypeId: google.maps.MapTypeId.TERRAIN,
