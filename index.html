@@ -90,44 +90,44 @@
         font-family: 'Helvetica-Neue', sans-serif;
       }
       /* ungrid.css (97 bytes minified) */
-      @media (min-width: 30em) {
+      /*@media (min-width: 30em) {
           .row { width: 100%; display: table; table-layout: fixed; }
           .col { display: table-cell; }
-      }
+      }*/
       /* end ungrid: http://chrisnager.github.io/ungrid */
-      #title {
-        padding-top: 10px;
+      #header {
+        padding-top: 5px;
         padding-bottom: 5px;
         text-align: center;
         text-transform: uppercase;
         color: #666;
         background-color: #fff;
-        font-size: 24px;
+        font-size: 32px;
         font-family: 'Helvetica-Neue', sans-serif;
       }
       #map {
         position: absolute;
-        left: 0;
+        top: 56px;
         right: 0;
-        /*height: 58%;*/
-        height: 100%;
+        bottom: 0%;
+        left: 0;
         background-image: url(assets/preview.png);
         background-size: contain;
         background-repeat: no-repeat;
-        z-index: 88888;
       }
       #graphs {
         position: absolute;
+        top: 100%;
+        right: 0;
         bottom: 0;
         left: 0;
-        right: 0;
-        top: 64%;
         width: 100%;
         overflow-y: scroll;
         display:none;
       }
       #graph-1 {
         height: 292px;
+        width: 100%;
         display: none;
         border-left: 8px solid #9DCBDA;
         padding-bottom: 2px;
@@ -135,6 +135,7 @@
       }
       #graph-2 {
         height: 292px;
+        width: 100%;
         display: none;
         border-left: 8px solid #6E9962;
         padding-bottom: 2px;
@@ -144,26 +145,61 @@
         -webkit-box-sizing: border-box;
          box-sizing:        border-box;
       }
-
-      /*#stats{
-        position: absolute;
-        z-index: 99999;
-        width: 300px;
-        height: 200px;
-        right:200px;
-        top:45px;
-        background-color: #000;
-        opacity: 0.3;
-      }
-      .menu{
-        position: relative;
-        margin-top: 60px;
-      }*/
       #graph-1 .highcharts-input-group text{
         text-anchor: end;
       }
       #graph-1 .highcharts-input-group text tspan{
         text-anchor: middle;
+      }
+      #key {
+        position: absolute;
+        width: 170px;
+        right: 10px;
+        top: 100px;
+        background-color: rgba(0,0,0,0.2);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #252525;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      #key > h1, h2, h3, h4 {
+        padding: 5px;
+        margin: 0 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+
+      .key-head {
+        padding-left: 5px;
+        background: #FFCC33;
+        text-align: center;
+        color: #252525;
+      }
+
+      .definition {
+        margin: 0 0;
+        font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #252525;
+      }
+
+      .logo {
+         display: inline-block;
+         padding-top: 5px;
+      }
+
+      #key .cartodb-legend {
+        position: static;
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+      #key .cartodb-legend ul li {
+        color: #252525;
+
       }
     </style>
 
@@ -171,22 +207,47 @@
   </head>
   <body>
 
-    <!-- <div id="stats">
-      <div class='menu'>
-        <ul>
-          <li>A</li>
-          <li>B</li>
-        </ul>
+    <div id="header">
+      <div class="logo">
+        <a target="_blank" href="http://vitalsigns.org/">
+          <img src="assets/VS-logo-med-14.png" alt="VitalSigns" width="160" height="24">
+        </a>
       </div>
-    </div> -->
+      <b> Water </b>Availability
+    </div>
 
-    <div id="title" class="row"><b>Water </b>Availability</div>
-
-    <div id="map" class="row" style="width: 100%"></div>
+    <div id="map" style="width: 100%"></div>
     <div id="graphs">
-      <div id="graph-1" class="row inset"></div>
+      <div id="graph-1" class="inset"></div>
       <br>
-      <div id="graph-2" class="row inset"></div>
+      <div id="graph-2" class="inset"></div>
+    </div>
+
+    <div id="key">
+      <h4 class="key-head">MAP TERMS + KEY</h4>
+      <h5>AWLR</h5>
+      <div class="definition">automatic water level recorder</div>
+      <h5>DMF</h5>
+      <div class="definition">daily mean flow</div>
+      <h5>D/S or U/S</h5>
+      <div class="definition">down/upstream</div>
+      <h5>LNBWB</h5>
+      <div class="definition">Lake Nyasa Basin Water Board</div>
+      <h5>met</h5>
+      <div class="definition">meteorological</div>
+      <br>
+      <div class="cartodb-legend category">
+      <ul>
+        <li>
+          <div class="bullet" style="background: #9bc7f4"></div> No Data
+        </li>
+        <li>
+          <div class="bullet" style="background: #3E7BB6"></div> Data
+        </li>
+      </ul>
+      </div>
+
+
     </div>
 
     <!-- include jquery and highstock (faster than highcharts) -->
