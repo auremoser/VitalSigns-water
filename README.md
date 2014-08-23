@@ -17,7 +17,7 @@ Originally piloted with only water gauging stations and rivers rendered, this ma
 
 
 Here's how the relationship between graph and map looks:
-![Map of Gauging Station Data](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-watermashup.jpg)
+~~![Map of Gauging Station Data](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/VS-watermashup.jpg)~~
 
 Here's how the fixed graph looks for a station that has data and TZA clusters added:
 ![Clusters!](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/TZA_clusters.jpg)

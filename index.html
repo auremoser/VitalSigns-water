@@ -89,18 +89,11 @@
         line-height: 22px;
         font-family: 'Helvetica-Neue', sans-serif;
       }
-      /* ungrid.css (97 bytes minified) */
-      /*@media (min-width: 30em) {
-          .row { width: 100%; display: table; table-layout: fixed; }
-          .col { display: table-cell; }
-      }*/
-      /* end ungrid: http://chrisnager.github.io/ungrid */
       #header {
         padding-top: 5px;
-        padding-bottom: 5px;
         text-align: center;
         text-transform: uppercase;
-        color: #666;
+        color: #252525;
         background-color: #fff;
         font-size: 32px;
         font-family: 'Helvetica-Neue', sans-serif;
@@ -131,7 +124,6 @@
         display: none;
         border-left: 8px solid #9DCBDA;
         padding-bottom: 2px;
-
       }
       #graph-2 {
         height: 292px;
@@ -154,40 +146,41 @@
       #key {
         position: absolute;
         width: 170px;
-        right: 10px;
+        right: 20px;
         top: 100px;
-        background-color: rgba(0,0,0,0.2);
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: rgba(255,255,255,0.5);
+        font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif;
         color: #252525;
         padding: 5px;
         border-radius: 5px;
       }
-
       #key > h1, h2, h3, h4 {
         padding: 5px;
         margin: 0 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif;
         text-align: center;
       }
-
+      #key > h6 {
+        padding-top: 5px;
+        margin: 0 0;
+        font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif;
+      }
       .key-head {
         padding-left: 5px;
         background: #FFCC33;
         text-align: center;
         color: #252525;
       }
-
       .definition {
         margin: 0 0;
-        font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font: 12px "Helvetica-Neue", Helvetica, Arial, sans-serif;
         color: #252525;
       }
-
       .logo {
          display: inline-block;
          padding-top: 5px;
+         padding-right: 15px;
       }
-
       #key .cartodb-legend {
         position: static;
         background: none;
@@ -196,13 +189,15 @@
         box-shadow: none;
         border: none;
         padding: 0;
+        margin-top: 5px;
       }
-
       #key .cartodb-legend ul li {
+        padding: 2 2;
+        margin: 0 0 2 2;
         color: #252525;
-
+        font: 11px "Helvetica-Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
       }
-
     </style>
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css"/>
@@ -212,10 +207,10 @@
     <div id="header">
       <div class="logo">
         <a target="_blank" href="http://vitalsigns.org/">
-          <img src="assets/VS-logo-med-14.png" alt="VitalSigns" width="160" height="24">
+          <img src="assets/VS-logo-med-14.png" alt="VitalSigns" width="170" height="24">
         </a>
       </div>
-      <b> Water </b>Availability
+      <b>Water </b>Availability
     </div>
 
     <div id="map" style="width: 100%"></div>
@@ -227,29 +222,26 @@
 
     <div id="key">
       <h4 class="key-head">MAP TERMS + KEY</h4>
-      <h5>AWLR</h5>
-      <div class="definition">automatic water level recorder</div>
-      <h5>DMF</h5>
-      <div class="definition">daily mean flow</div>
-      <h5>D/S or U/S</h5>
-      <div class="definition">down/upstream</div>
-      <h5>LNBWB</h5>
-      <div class="definition">Lake Nyasa Basin Water Board</div>
-      <h5>MET</h5>
-      <div class="definition">meteorological</div>
-      <br>
+      <h6>AWLR</h6>
+        <div class="definition">automatic water level recorder</div>
+      <h6>DMF</h6>
+        <div class="definition">daily mean flow</div>
+      <h6>D/S or U/S</h6>
+        <div class="definition">down/upstream</div>
+      <h6>LNBWB</h6>
+        <div class="definition">Lake Nyasa Basin Water Board</div>
+      <h6>MET</h6>
+        <div class="definition">meteorological</div>
       <div class="cartodb-legend category">
-      <ul>
-        <li>
-          <div class="bullet" style="background: #9bc7f4"></div> No Data
-        </li>
-        <li>
-          <div class="bullet" style="background: #3E7BB6"></div> Data
-        </li>
-      </ul>
+        <ul>
+          <li>
+             <div class="bullet" style="background: #9bc7f4"></div> No Data
+          </li>
+          <li>
+            <div class="bullet" style="background: #3E7BB6"></div> Data
+          </li>
+        </ul>
       </div>
-
-
     </div>
 
     <!-- include jquery and highstock (faster than highcharts) -->
