@@ -50,31 +50,24 @@ function main() {
 
   cartodb.createVis('map', layerUrl, options)
     .done(function(vis, layers) {
+      console.log(layers)
 
-      // create layer and add to the map, then add some interfeatures
-      cartodb.createLayer(map, layerUrl)
-      .addTo(map)
-      .on('done', function(layer) {
+      moveKey();
 
-        var sublayer = layer.getSubLayer(CLICKLAYER);
+      var sublayer = layers[1].getSubLayer(CLICKLAYER);
 
-        sublayer.on('featureClick', function(e, pos, latlng, data) {
-          // console.log(e, pos, latlng, data);
-          // if graph == to 1, show, if not, don't show 2nd
-          var readings = mapping[data.scn];
-          $('#graph-1').show()
-          $('#graph-2').toggle(readings.length !== 1)
+      sublayer.on('featureClick', function(e, pos, latlng, data) {
+        // console.log(e, pos, latlng, data);
+        // if graph == to 1, show, if not, don't show 2nd
+        var readings = mapping[data.scn];
+        $('#graph-1').show()
+        $('#graph-2').toggle(readings.length !== 1)
 
-          readings.forEach(function(r, i) {
-            r.scn = data.scn
-            r.basin_name = data.basin_name
-            loadPoint(r, i)
-          })
+        readings.forEach(function(r, i) {
+          r.scn = data.scn
+          r.basin_name = data.basin_name
+          loadPoint(r, i)
         })
-
-        sublayer.on('error', function(err) {
-          cartodb.log.log('error: ' + err);
-        });
 
       })
     })
@@ -180,6 +173,10 @@ function loadFile(url){
       // console.log(mapping)
     }
   })
+}
+
+function moveKey(){
+  $(".cartodb-layer-selector-box").appendTo("#key")
 }
 
 $(main);
