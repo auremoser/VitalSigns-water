@@ -37,40 +37,43 @@ function main() {
       }
     ]
   };
-  map = new google.maps.Map(document.getElementById('map'),  mapOptions);
+  // map = new google.maps.Map(document.getElementById('map'),  mapOptions);
 
   // var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/81f06948-18f6-11e4-b079-0e230854a1cb/viz.json';
   var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/78b74fbc-1929-11e4-bc28-0e10bcd91c2b/viz.json';
 
-  // create layer and add to the map, then add some interfeatures
-  cartodb.createLayer(map, layerUrl)
-  .addTo(map)
-  .on('done', function(layer) {
+  var options = {
+    zoom: 7,
+    cartodb_logo: false,
+    layer_selector: true,
+  }
 
-    var sublayer = layer.getSubLayer(CLICKLAYER);
+  cartodb.createVis('map', layerUrl, options)
+    .done(function(vis, layers) {
+      console.log(layers)
 
-    sublayer.on('featureClick', function(e, pos, latlng, data) {
-      // console.log(e, pos, latlng, data);
-      // if graph == to 1, show, if not, don't show 2nd
-      var readings = mapping[data.scn];
-      $('#graph-1').show()
-      $('#graph-2').toggle(readings.length !== 1)
+      moveKey();
 
-      readings.forEach(function(r, i) {
-        r.scn = data.scn
-        r.basin_name = data.basin_name
-        loadPoint(r, i)
+      var sublayer = layers[1].getSubLayer(CLICKLAYER);
+
+      sublayer.on('featureClick', function(e, pos, latlng, data) {
+        // console.log(e, pos, latlng, data);
+        // if graph == to 1, show, if not, don't show 2nd
+        var readings = mapping[data.scn];
+        $('#graph-1').show()
+        $('#graph-2').toggle(readings.length !== 1)
+
+        readings.forEach(function(r, i) {
+          r.scn = data.scn
+          r.basin_name = data.basin_name
+          loadPoint(r, i)
+        })
+
       })
     })
-
-    sublayer.on('error', function(err) {
-      cartodb.log.log('error: ' + err);
+    .on('error', function() {
+      cartodb.log.log("some error occurred");
     });
-
-  })
-  .on('error', function() {
-    cartodb.log.log("some error occurred");
-  });
 
 }
 
@@ -170,6 +173,10 @@ function loadFile(url){
       // console.log(mapping)
     }
   })
+}
+
+function moveKey(){
+  $(".cartodb-layer-selector-box").appendTo("#key")
 }
 
 $(main);
