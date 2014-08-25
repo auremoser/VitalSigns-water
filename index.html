@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/auremoser/vital-signs/master/assets/vs-favicon.ico" type="image/x-icon">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css"/>
+
     <style>
 
     /*CUSTOM FONTS*/
@@ -177,9 +180,9 @@
         color: #252525;
       }
       .logo {
-         display: inline-block;
-         padding-top: 5px;
-         padding-right: 15px;
+        display: inline-block;
+        padding-top: 5px;
+        padding-right: 15px;
       }
       #key .cartodb-legend {
         position: static;
@@ -191,16 +194,83 @@
         padding: 0;
         margin-top: 5px;
       }
-      #key .cartodb-legend ul li {
+      #key div.cartodb-legend.category ul li {
+        color: #252525;
+      }
+      #key div.cartodb-legend .category{
         padding: 2 2;
         margin: 0 0 2 2;
-        color: #252525;
         font: 11px "Helvetica-Neue", Helvetica, Arial, sans-serif;
         font-weight: bold;
       }
+      #key .cartodb-layer-selector-box {
+        font: 11px "Helvetica-Neue", Helvetica, Arial, sans-serif;
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-radius: none;
+        border: none;
+        padding: 0;
+        z-index: 100000;
+      }
+    #key .cartodb-dropdown {
+      width: 178px !important;
+      left: -6px !important;
+      top: 35px !important;
+      border-radius: 5px;
+      background-color: rgba(255,255,255,0.9);
+    }
+
+    #key div.cartodb-layer-selector-box div.cartodb-dropdown ul li a.layer {
+      padding: 12px 4px;
+      font: 11px "Helvetica-Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    div.cartodb-layer-selector-box a.layers {
+      float: left;
+      width: 167px;
+      padding: 5px 2px;
+      line-height: 20px;
+      color: #252525;
+      font: 11px "Helvetica-Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+
+    }
+    div.cartodb-layer-selector-box {
+      display: none;
+      position: relative;
+      float: right;
+      margin: 4px 28px 0 0;
+      width: 142px;
+      height: 29px;
+    }
+
+    div.cartodb-layer-selector-box a.layers .count {
+      position: absolute;
+      right: -20px;
+      top: 6px;
+      width: auto;
+      padding: 3px 6px;
+      margin: 0;
+      font-size: 10px;
+      color: #fff;
+      line-height: 12px;
+      background: #666;
+    }
+
+    .cartodb-dropdown .border .vertical_bottom .horizontal_right .tick_right ul li{
+      width: 200px;
+      top: 46px;
+      left: 29px;
+      display: block;
+      opacity: 1;
+    }
     </style>
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css"/>
   </head>
   <body>
 
