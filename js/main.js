@@ -18,32 +18,31 @@ function main() {
   loadFile('data/mapping.json');
 
   // create google maps map
-  var mapOptions = {
-    // zoom projection was previously a more-zoomed-out 6
-    zoom: 7,
-    // set projection to situate tanzania a little higher
-    center: new google.maps.LatLng(-10.222, 36.122),
-    mapTypeId: google.maps.MapTypeId.TERRAIN,
-    // cartodb_logo: true,
-    layer_selector: true,
-    // remove poi popups from google maps
-    styles: [
-      {
-          featureType: "poi",
-          elementType: "labels",
-          stylers: [
-            { visibility: "off" }
-          ]
-      }
-    ]
-  };
+  // var mapOptions = {
+  //   zoom: 7,
+  //   // set projection to situate tanzania a little higher
+  //   center: new google.maps.LatLng(-10.222, 36.122),
+  //   mapTypeId: google.maps.MapTypeId.TERRAIN,
+  //   // remove poi popups from google maps
+  //   styles: [
+  //     {
+  //         featureType: "poi",
+  //         elementType: "labels",
+  //         stylers: [
+  //           { visibility: "off" }
+  //         ]
+  //     }
+  //   ]
+  // };
   // map = new google.maps.Map(document.getElementById('map'),  mapOptions);
 
-  // var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/81f06948-18f6-11e4-b079-0e230854a1cb/viz.json';
   var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/78b74fbc-1929-11e4-bc28-0e10bcd91c2b/viz.json';
 
   var options = {
+    // zoom projection was previously a more-zoomed-out 6
     zoom: 7,
+    center_lat: -9.922,
+    center_lon: 36.122,
     cartodb_logo: false,
     layer_selector: true,
   }
