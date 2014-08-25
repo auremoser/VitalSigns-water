@@ -14,13 +14,13 @@ Originally piloted with only water gauging stations and rivers rendered, this ma
 * When clicked, the station points plotted on the map load associate data in the graph below.
 * Stations will multiple data sets feature multiple graphs which can be scrolled through at right:  
 
-![VS Graph1](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/vs-graph1.jpg)  
+![VS Graph1](https://raw.githubusercontent.com/auremoser/VitalSigns-water/master/assets/vs-graph1.jpg)  
 
-![VS Graph2](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/vs-graph2.jpg)
+![VS Graph2](https://raw.githubusercontent.com/auremoser/VitalSigns-water/master/assets/vs-graph2.jpg)
 
 * A key at right defines common abbreviations, the map station color-scheme, and allows a user to show and hide map layers including the river network.
 
-![VS-key](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/vs-key.jpg)
+![VS-key](https://raw.githubusercontent.com/auremoser/VitalSigns-water/master/assets/vs-key.jpg)
 
 
 ### Next steps
@@ -29,6 +29,6 @@ The data should be scrubbed to better match associated environmental data sets, 
 ### Demo
 You can find the work in progress demo [here](http://auremoser.github.io/VitalSigns-water/).
 
-![VitalSigns Final](https://raw.githubusercontent.com/auremoser/VitalSigns-water/gh-pages/assets/vs-final.jpg)
+![VitalSigns Final](https://raw.githubusercontent.com/auremoser/VitalSigns-water/master/assets/vs-final.jpg)
 
 Current Feature Status Document ([available here](https://docs.google.com/a/ushahidi.com/document/d/1EqgVCw-hSaYcjneleup-y-xz5_h9r--00TGQq7DUSuQ/edit#))
