@@ -36,7 +36,7 @@ function main() {
   // };
   // map = new google.maps.Map(document.getElementById('map'),  mapOptions);
 
-  var layerUrl = 'http://documentation.cartodb.com/api/v2/viz/78b74fbc-1929-11e4-bc28-0e10bcd91c2b/viz.json';
+  var layerUrl = 'https://auremoser.cartodb.com/api/v2/viz/78b74fbc-1929-11e4-bc28-0e10bcd91c2b/viz.json';
 
   var options = {
     // zoom projection was previously a more-zoomed-out 6
